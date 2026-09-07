@@ -9,7 +9,7 @@ Sources checked live on 2026-09-07:
 | Requirement | Status | Evidence |
 |---|---|---|
 | One original TB3 task | Complete | `tasks/repair-freecad-lineage` |
-| Follow contribution, CI, and review rules | Complete | 22/22 static checks; 34 pass + 1 N/A implementation rubric |
+| Follow contribution, CI, and review rules | Partial exact-CI parity | current 22/22 static checks pass; 35-criterion review has 34 pass + 1 N/A, but recorded reviewer was Codex rather than current CI's Claude Code `sonnet` |
 | Docker environment builds | Complete | `evidence/formal-gates/image-baseline.json` |
 | Oracle passes | Complete | 10/10 reward 1, zero exceptions |
 | NOP fails | Complete | 3/3 reward 0, zero exceptions |
@@ -26,4 +26,4 @@ Sources checked live on 2026-09-07:
 
 Invalid infrastructure and policy-stop trials are disclosed rather than counted as genuine model failures.
 
-Current-source recheck on 2026-09-07 used Terminal-Bench main commit `83c7a6172d629c6575b785ab12c8db787bb2e323`. Its 22 static checks still pass this frozen task, and its 35 implementation-rubric criterion names match the recorded review. The current six-criterion trial-analysis prompt is broader than the two-criterion analysis reports stored here. The four required task README sections exist and meet the structural length guidance; the contributor must personally review and rewrite them in their own words to satisfy CONTRIBUTING's human-authorship rule.
+Current-source recheck on 2026-09-07 used Terminal-Bench main commit `83c7a6172d629c6575b785ab12c8db787bb2e323`. Its 22 static checks still pass this frozen task, and its 35 implementation-rubric criterion names match the recorded review. The recorded review used Codex `gpt-5.6-sol/high`, while the current review workflow uses Claude Code `sonnet`; exact reviewer parity remains open. The current six-criterion trial-analysis prompt is also broader than the two-criterion analysis reports stored here. The four required task README sections exist and meet the structural length guidance; the contributor must personally review and rewrite them in their own words to satisfy CONTRIBUTING's human-authorship rule.
