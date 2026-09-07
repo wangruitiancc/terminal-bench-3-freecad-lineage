@@ -1,0 +1,955 @@
+{
+  "candidate_tree": {
+    "allowed_directories": [
+      "public"
+    ],
+    "allowed_executable_files": [
+      "public/check_public.py"
+    ],
+    "allowed_files": {
+      ".dockerignore": "utf8",
+      "Dockerfile": "utf8",
+      "face_lineage.py": "python",
+      "public/CONTRACT.md": "utf8",
+      "public/check_public.py": "python",
+      "public/edit_public.json": "json",
+      "public/scene_public.FCStd": "fcstd"
+    },
+    "baseline_status": "frozen-formal-v2",
+    "expected_directory_modes": {
+      "public": "0755"
+    },
+    "expected_file_modes": {
+      ".dockerignore": "0644",
+      "Dockerfile": "0644",
+      "face_lineage.py": "0644",
+      "public/CONTRACT.md": "0644",
+      "public/check_public.py": "0755",
+      "public/edit_public.json": "0644",
+      "public/scene_public.FCStd": "0644"
+    },
+    "expected_root_mode": "0755",
+    "expected_sha256": {
+      ".dockerignore": "9869225d46fc5bc0d20431b148579b7f6c0fca3023daec6ff583bde127aac892",
+      "Dockerfile": "f34190f051ff17e3b2ef52ecd62f7587ccfb77e6ce5452313911ef7a224df90f",
+      "face_lineage.py": "cdfbaeddd4d445d939cd6725b3aff1f5796262f5b0c172e66f1116a560defef8",
+      "public/CONTRACT.md": "ea3da6a95d390926cabd2c14db7dc211f5b32418cf1320cc3a76743aa648fd99",
+      "public/check_public.py": "b313564bbfecb7831e21a92221e087994f4cffbb70f8b379c99b67bc862ce862",
+      "public/edit_public.json": "ae5f023b84c6c90a70b11dfcac20104a822858c56fc3a411b4ae497974777a48",
+      "public/scene_public.FCStd": "0a1981765603b5d617a914dc74f98449acd825c473785adcffc2cca54d490871"
+    },
+    "max_file_bytes": {
+      "default": 2097152,
+      "face_lineage.py": 1048576,
+      "public/scene_public.FCStd": 67108864
+    }
+  },
+  "fcstd": {
+    "allowed_archive_comments": [
+      "FreeCAD Document"
+    ],
+    "allowed_document_xml_comments": [
+      "\n FreeCAD Document, see https://www.freecad.org for more information...\n"
+    ],
+    "allowed_member_regexes": [
+      "^Document\\.xml$",
+      "^PartShape[0-9]*\\.brp$",
+      "^PlacementList$",
+      "^ScaleList$"
+    ],
+    "allowed_property_name_types": [
+      [
+        "BusinessId",
+        "App::PropertyString"
+      ],
+      [
+        "CoatingCode",
+        "App::PropertyString"
+      ],
+      [
+        "ColoredElements",
+        "App::PropertyLinkSubHidden"
+      ],
+      [
+        "Comment",
+        "App::PropertyString"
+      ],
+      [
+        "Company",
+        "App::PropertyString"
+      ],
+      [
+        "ConsumerKind",
+        "App::PropertyString"
+      ],
+      [
+        "ConsumerLinks",
+        "App::PropertyLinkList"
+      ],
+      [
+        "Consumers",
+        "App::PropertyLinkList"
+      ],
+      [
+        "CreatedBy",
+        "App::PropertyString"
+      ],
+      [
+        "CreationDate",
+        "App::PropertyString"
+      ],
+      [
+        "CutterMargin",
+        "App::PropertyFloat"
+      ],
+      [
+        "DeltaVolume",
+        "App::PropertyFloat"
+      ],
+      [
+        "Derived",
+        "App::PropertyFloat"
+      ],
+      [
+        "ElementCount",
+        "App::PropertyIntegerConstraint"
+      ],
+      [
+        "ElementList",
+        "App::PropertyLinkList"
+      ],
+      [
+        "ExpressionEngine",
+        "App::PropertyExpressionEngine"
+      ],
+      [
+        "FloorZ",
+        "App::PropertyFloat"
+      ],
+      [
+        "Friction",
+        "App::PropertyFloat"
+      ],
+      [
+        "Gain",
+        "App::PropertyFloat"
+      ],
+      [
+        "GrooveY0",
+        "App::PropertyFloat"
+      ],
+      [
+        "GrooveY1",
+        "App::PropertyFloat"
+      ],
+      [
+        "Id",
+        "App::PropertyString"
+      ],
+      [
+        "InputStage",
+        "App::PropertyLink"
+      ],
+      [
+        "Kind",
+        "App::PropertyString"
+      ],
+      [
+        "Label",
+        "App::PropertyString"
+      ],
+      [
+        "Label2",
+        "App::PropertyString"
+      ],
+      [
+        "LastModifiedBy",
+        "App::PropertyString"
+      ],
+      [
+        "LastModifiedDate",
+        "App::PropertyString"
+      ],
+      [
+        "License",
+        "App::PropertyString"
+      ],
+      [
+        "LicenseURL",
+        "App::PropertyString"
+      ],
+      [
+        "LineageFaces",
+        "App::PropertyLink"
+      ],
+      [
+        "LinkClaimChild",
+        "App::PropertyBool"
+      ],
+      [
+        "LinkCopyOnChange",
+        "App::PropertyEnumeration"
+      ],
+      [
+        "LinkCopyOnChangeGroup",
+        "App::PropertyLink"
+      ],
+      [
+        "LinkCopyOnChangeSource",
+        "App::PropertyXLink"
+      ],
+      [
+        "LinkCopyOnChangeTouched",
+        "App::PropertyBool"
+      ],
+      [
+        "LinkExecute",
+        "App::PropertyString"
+      ],
+      [
+        "LinkPlacement",
+        "App::PropertyPlacement"
+      ],
+      [
+        "LinkTransform",
+        "App::PropertyBool"
+      ],
+      [
+        "LinkedObject",
+        "App::PropertyXLink"
+      ],
+      [
+        "LoadMPa",
+        "App::PropertyFloat"
+      ],
+      [
+        "LocalFrame",
+        "App::PropertyPlacement"
+      ],
+      [
+        "MasterFaces",
+        "App::PropertyLinkSubList"
+      ],
+      [
+        "MasterQueryRole",
+        "App::PropertyString"
+      ],
+      [
+        "Material",
+        "App::PropertyMap"
+      ],
+      [
+        "Meta",
+        "App::PropertyMap"
+      ],
+      [
+        "OpaqueCureHours",
+        "App::PropertyFloat"
+      ],
+      [
+        "OpaqueDepartment",
+        "App::PropertyString"
+      ],
+      [
+        "OpaqueFlags",
+        "App::PropertyStringList"
+      ],
+      [
+        "OpaqueNonce",
+        "App::PropertyString"
+      ],
+      [
+        "OpaquePolicyTag",
+        "App::PropertyString"
+      ],
+      [
+        "OpaquePriority",
+        "App::PropertyInteger"
+      ],
+      [
+        "OpaqueTolerance",
+        "App::PropertyFloat"
+      ],
+      [
+        "OpaqueVendorLot",
+        "App::PropertyString"
+      ],
+      [
+        "OperationId",
+        "App::PropertyString"
+      ],
+      [
+        "Operations",
+        "App::PropertyLinkList"
+      ],
+      [
+        "OutputStage",
+        "App::PropertyLink"
+      ],
+      [
+        "Parameters",
+        "App::PropertyLink"
+      ],
+      [
+        "Placement",
+        "App::PropertyPlacement"
+      ],
+      [
+        "PlacementList",
+        "App::PropertyPlacementList"
+      ],
+      [
+        "Purpose",
+        "App::PropertyString"
+      ],
+      [
+        "QueryRole",
+        "App::PropertyString"
+      ],
+      [
+        "Reference",
+        "App::PropertyLinkSub"
+      ],
+      [
+        "RepeatX0",
+        "App::PropertyFloat"
+      ],
+      [
+        "RepeatXLength",
+        "App::PropertyFloat"
+      ],
+      [
+        "RepeatY0",
+        "App::PropertyFloat"
+      ],
+      [
+        "RepeatYLength",
+        "App::PropertyFloat"
+      ],
+      [
+        "Result",
+        "App::PropertyLink"
+      ],
+      [
+        "Scale",
+        "App::PropertyFloat"
+      ],
+      [
+        "ScaleList",
+        "App::PropertyVectorList"
+      ],
+      [
+        "ScaleVector",
+        "App::PropertyVector"
+      ],
+      [
+        "SeedId",
+        "App::PropertyString"
+      ],
+      [
+        "SeedPatches",
+        "App::PropertyLinkList"
+      ],
+      [
+        "SeedSplitX",
+        "App::PropertyFloat"
+      ],
+      [
+        "SemanticRole",
+        "App::PropertyString"
+      ],
+      [
+        "Sequence",
+        "App::PropertyInteger"
+      ],
+      [
+        "Shape",
+        "Part::PropertyPartShape"
+      ],
+      [
+        "ShowElement",
+        "App::PropertyBool"
+      ],
+      [
+        "ShowHidden",
+        "App::PropertyBool"
+      ],
+      [
+        "SlaveFaces",
+        "App::PropertyLinkSubList"
+      ],
+      [
+        "SlaveQueryRole",
+        "App::PropertyString"
+      ],
+      [
+        "StockHeight",
+        "App::PropertyFloat"
+      ],
+      [
+        "StockLength",
+        "App::PropertyFloat"
+      ],
+      [
+        "StockWidth",
+        "App::PropertyFloat"
+      ],
+      [
+        "SurfaceRoleMap",
+        "App::PropertyStringList"
+      ],
+      [
+        "SurfaceFrame",
+        "App::PropertyPlacement"
+      ],
+      [
+        "Targets",
+        "App::PropertyLinkSubList"
+      ],
+      [
+        "TipName",
+        "App::PropertyString"
+      ],
+      [
+        "Tool",
+        "App::PropertyLink"
+      ],
+      [
+        "Uid",
+        "App::PropertyUUID"
+      ],
+      [
+        "Visibility",
+        "App::PropertyBool"
+      ],
+      [
+        "VisibilityList",
+        "App::PropertyBoolList"
+      ],
+      [
+        "_LinkOwner",
+        "App::PropertyInteger"
+      ]
+    ],
+    "allowed_xml_attributes": {
+      "Bool": [
+        "value"
+      ],
+      "BoolList": [
+        "value"
+      ],
+      "Dep": [
+        "Name"
+      ],
+      "Document": [
+        "FileVersion",
+        "ProgramVersion",
+        "SchemaVersion"
+      ],
+      "Expression": [
+        "expression",
+        "path"
+      ],
+      "ExpressionEngine": [
+        "count"
+      ],
+      "Extension": [
+        "name",
+        "type"
+      ],
+      "Extensions": [
+        "Count"
+      ],
+      "Float": [
+        "value"
+      ],
+      "Integer": [
+        "value"
+      ],
+      "Link": [
+        "obj",
+        "sub",
+        "value"
+      ],
+      "LinkList": [
+        "count"
+      ],
+      "LinkSub": [
+        "count",
+        "value"
+      ],
+      "LinkSubList": [
+        "count"
+      ],
+      "Map": [
+        "count"
+      ],
+      "Object": [
+        "Extensions",
+        "id",
+        "name",
+        "type"
+      ],
+      "ObjectData": [
+        "Count"
+      ],
+      "ObjectDeps": [
+        "Count",
+        "Name"
+      ],
+      "Objects": [
+        "Count",
+        "Dependencies"
+      ],
+      "Part": [
+        "file"
+      ],
+      "PlacementList": [
+        "file"
+      ],
+      "Properties": [
+        "Count",
+        "TransientCount"
+      ],
+      "Property": [
+        "attr",
+        "doc",
+        "group",
+        "hide",
+        "name",
+        "ro",
+        "status",
+        "type"
+      ],
+      "PropertyPlacement": [
+        "A",
+        "Ox",
+        "Oy",
+        "Oz",
+        "Px",
+        "Py",
+        "Pz",
+        "Q0",
+        "Q1",
+        "Q2",
+        "Q3"
+      ],
+      "PropertyVector": [
+        "valueX",
+        "valueY",
+        "valueZ"
+      ],
+      "String": [
+        "value"
+      ],
+      "StringList": [
+        "count"
+      ],
+      "Sub": [
+        "value"
+      ],
+      "Uuid": [
+        "value"
+      ],
+      "VectorList": [
+        "file"
+      ],
+      "XLink": [
+        "file",
+        "name",
+        "stamp"
+      ],
+      "_Property": [
+        "name",
+        "status",
+        "type"
+      ]
+    },
+    "allowed_xml_tags": [
+      "Bool",
+      "BoolList",
+      "Dep",
+      "Document",
+      "Expression",
+      "ExpressionEngine",
+      "Extension",
+      "Extensions",
+      "Float",
+      "Integer",
+      "Link",
+      "LinkList",
+      "LinkSub",
+      "LinkSubList",
+      "Map",
+      "Object",
+      "ObjectData",
+      "ObjectDeps",
+      "Objects",
+      "Part",
+      "PlacementList",
+      "Properties",
+      "Property",
+      "PropertyPlacement",
+      "PropertyVector",
+      "String",
+      "StringList",
+      "Sub",
+      "Uuid",
+      "VectorList",
+      "XLink",
+      "_Property"
+    ],
+    "expected_zip_member_metadata": {
+      "compress_type": 8,
+      "create_system": 3,
+      "create_version": 20,
+      "external_attr": 2176057344,
+      "extract_version": 20,
+      "flag_bits": 0,
+      "internal_attr": 0,
+      "volume": 0
+    },
+    "forbidden_document_patterns": [
+      {
+        "id": "case-id-property",
+        "regex": "\\bCaseId\\b"
+      },
+      {
+        "id": "graph-json-property",
+        "regex": "\\bGraphJSON\\b"
+      },
+      {
+        "id": "removed-ledger-field",
+        "regex": "\\b(?:PatchLedgerJSON|PatchLedger|PatchIds)\\b"
+      },
+      {
+        "id": "feature-python",
+        "regex": "FeaturePython"
+      },
+      {
+        "id": "python-object-property",
+        "regex": "(?:App::PropertyPythonObject|PropertyPythonObject|PythonObject)"
+      },
+      {
+        "id": "python-proxy",
+        "regex": "(?:<Property[^>]+name=\\\"Proxy\\\"|SerializedPython|PythonProxy)"
+      },
+      {
+        "id": "macro-or-script-payload",
+        "regex": "(?:App::PropertyString[^>]+name=\\\"(?:Macro|Script|Code)\\\"|<Property[^>]+name=\\\"(?:Macro|Script|Code)\\\")"
+      },
+      {
+        "id": "external-document-link",
+        "regex": "(?:App::PropertyLinkExternal|ExternalDocumentReference)"
+      },
+      {
+        "id": "answer-marker",
+        "regex": "(?:author[-_ ]truth|\\bexpected_faces\\b|\\boracle_report\\b|\\breference_answer\\b|\\bcorrect_answer\\b|\\banswer_key\\b|name=\\\"(?:ExpectedFaces|Oracle|AnswerKey|GroundTruth|ReferenceSolution)\\\")"
+      },
+      {
+        "id": "author-patch-id",
+        "regex": "(?<![A-Za-z0-9_])(?:TL0|TL1|TR0|TR1|W3|W5L|W5R|W6|X2|X10|F0|F1)(?![A-Za-z0-9_])"
+      },
+      {
+        "id": "v0-reference-algorithm",
+        "regex": "clip live boundary patches at every stage"
+      }
+    ],
+    "max_archive_bytes": 67108864,
+    "max_compression_ratio": 250.0,
+    "max_document_xml_bytes": 8388608,
+    "max_member_bytes": 33554432,
+    "max_member_timestamp_span_seconds": 4.0,
+    "max_members": 256,
+    "max_total_uncompressed_bytes": 134217728,
+    "schema_source_manifest_sha256": "2e7f5b3a4b40fdafbca5145fa1830cf3b53119929dfd253cd532b44e1e137ca0",
+    "schema_status": "frozen-formal-v2"
+  },
+  "image": {
+    "allowed_image_config_top_keys": [
+      "architecture",
+      "config",
+      "created",
+      "history",
+      "os",
+      "rootfs"
+    ],
+    "baseline_status": "frozen-formal-v2",
+    "expected_final_directory_modes": {
+      "app": "0755",
+      "app/public": "0755"
+    },
+    "expected_final_file_modes": {
+      "app/face_lineage.py": "0644",
+      "app/public/CONTRACT.md": "0444",
+      "app/public/check_public.py": "0444",
+      "app/public/edit_public.json": "0444",
+      "app/public/scene_public.FCStd": "0444"
+    },
+    "expected_final_file_sha256": {
+      "app/face_lineage.py": "cdfbaeddd4d445d939cd6725b3aff1f5796262f5b0c172e66f1116a560defef8",
+      "app/public/CONTRACT.md": "ea3da6a95d390926cabd2c14db7dc211f5b32418cf1320cc3a76743aa648fd99",
+      "app/public/check_public.py": "b313564bbfecb7831e21a92221e087994f4cffbb70f8b379c99b67bc862ce862",
+      "app/public/edit_public.json": "ae5f023b84c6c90a70b11dfcac20104a822858c56fc3a411b4ae497974777a48",
+      "app/public/scene_public.FCStd": "0a1981765603b5d617a914dc74f98449acd825c473785adcffc2cca54d490871"
+    },
+    "expected_final_gid": 57439,
+    "expected_final_inventory_sha256": "bf5c6d58a3bcfd9b8b83467f65c38fa5a2322145642f6740c33317ea3bba8391",
+    "expected_final_uid": 57439,
+    "expected_image_config_canonical_sha256": "e067662bd9931bf71889246995d3077e90df36b3f5fbd08b2589377275f04c82",
+    "expected_image_history_canonical_sha256": "dd20b6ba854422d10247902a07e4babc8a3f3440ac07ea4897124aced42e34eb",
+    "expected_repo_tags": null,
+    "expected_runtime_config_canonical_sha256": "a9160087592a7c25764bd56cdc81a5c0e4fc0fce553de5ff2119ec3a4331590e",
+    "expected_task_diff_ids": [
+      "sha256:abde12fb81a79d0e39268b9d259721536e024bc5c0fd1c495f1092be62c02983",
+      "sha256:b83e51798c8b7538efaa2aa2d0a98ad4763d1ac2d975f962377e491610b9f20c",
+      "sha256:28cc2c891be4862872c3a51d9186dc380ee0e2f50c3c5254a6503560dae5f368"
+    ],
+    "expected_task_layer_gname": "",
+    "expected_task_layer_mtime": 0,
+    "expected_task_layer_uname": "",
+    "final_allowed_directories": [
+      "app",
+      "app/public"
+    ],
+    "final_allowed_files": [
+      "app/face_lineage.py",
+      "app/public/CONTRACT.md",
+      "app/public/check_public.py",
+      "app/public/edit_public.json",
+      "app/public/scene_public.FCStd"
+    ],
+    "final_rootfs_closed_world": false,
+    "forbidden_env_name_regex": "(?:^|_)(?:ANTHROPIC|OPENAI|CLAUDE|API_KEY|SECRET|PASSWORD|CREDENTIAL)(?:_|$)",
+    "forbidden_history_regex": "(?i)(?:\\b(?:COPY|ADD)\\s+\\.\\s+/(?:app|work)\\b|author[-_ ]truth|build_fixtures\\.py|verify_harness\\.py|make_mutant\\.py)",
+    "global_text_suffixes": [
+      ".csv",
+      ".json",
+      ".md",
+      ".py",
+      ".sh",
+      ".toml",
+      ".tsv",
+      ".txt",
+      ".xml",
+      ".yaml",
+      ".yml"
+    ],
+    "max_image_config_bytes": 16777216,
+    "max_layer_tar_bytes": 8589934592,
+    "max_layers": 512,
+    "max_marker_file_bytes": 33554432,
+    "max_save_manifest_bytes": 8388608,
+    "max_save_members": 4096,
+    "max_tar_members": 250000,
+    "runtime_injected_paths": [
+      ".dockerenv",
+      "dev",
+      "dev/console",
+      "dev/pts",
+      "dev/shm",
+      "etc",
+      "etc/hostname",
+      "etc/hosts",
+      "etc/mtab",
+      "etc/resolv.conf"
+    ],
+    "scan_content_under_prefixes": [
+      "app",
+      "work",
+      "root",
+      "tmp",
+      "tests",
+      "solution",
+      "home"
+    ],
+    "sensitive_basenames": [
+      "author-truth.json",
+      "plan.tsv",
+      "verify_harness.py",
+      "build_fixtures.py",
+      "make_mutant.py",
+      "oracle.json",
+      "answer.json",
+      "reference.FCStd"
+    ],
+    "sensitive_path_components": [
+      ".git",
+      ".secrets",
+      "__pycache__"
+    ],
+    "sensitive_path_regex": "(?:^|/)(?:[^/]+\\.pyc|\\.env(?:\\.[^/]+)?|docker\\.sock)$",
+    "strict_final_roots": [
+      "app",
+      "work",
+      "tests",
+      "solution"
+    ],
+    "task_layer_allow_whiteouts": false,
+    "task_layer_allowed_directories": [
+      "app",
+      "app/public",
+      "etc"
+    ],
+    "trusted_base_diff_ids": [
+      "sha256:e644ff0c302d7de4c3e03dc718bc4b77ebeb324f7c8f5483b463fa230027b02c",
+      "sha256:438ed031efcca866beb4e473c78ec1551f819024b8be009c6dece520d024251f",
+      "sha256:12adeffec21ddb00dc503568e8c6de54760d98d4b99dbe5e8c4ca6feb3483e1d",
+      "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+      "sha256:43b0b86cc5c9ca9f6218e636ec30a38bc0b9283cfd9b07bfe5b3d1bf5e36ef55",
+      "sha256:cec6c465a2f697e8cc382dcb859220c26984e89d4b51cd6315cc91f65c5875d7",
+      "sha256:6f1b5b85414aac29c284e0f8b9253addb46e3a198cd66796f98a73a91c01532b",
+      "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+      "sha256:51212a6134fbbbe33bd24a2210da0ec4c2e267a6eec9db596e30f2f2538e940c",
+      "sha256:e575f56b54abcd457f687ca2f9873af4b3330256534f3eb102ec3271a2d4a951",
+      "sha256:9b747a80db5cdbb00313cece77b137f398da9620b806f396204b6f53f533a721",
+      "sha256:fc9c8fcaa1325e948abcfad1576a64e07944acad40e910afc89d06ff4f90f375",
+      "sha256:b2869e6c61d60bebf6606a54f8f731c0539c01b7d2dd733837fda2a64ce3b783",
+      "sha256:69953d6d0e96c7b1d82b2656046e978962d62698315f421bc8d76f19a4a06982",
+      "sha256:72296c2c131973e9b657ec1d823762f2a589dcb849cd72d17f69653ee107f661",
+      "sha256:d39854471fbbcb98c20cb8bfaa1868b0e3b341829a9da7e3c5516f0eac3678e1"
+    ]
+  },
+  "schema": "freecad-lineage-leak-policy-v1",
+  "text": {
+    "forbidden_patterns": [
+      {
+        "id": "case-id-channel",
+        "regex": "\\bCaseId\\b"
+      },
+      {
+        "id": "graph-json-channel",
+        "regex": "\\bGraphJSON\\b"
+      },
+      {
+        "id": "removed-ledger-field",
+        "regex": "\\b(?:PatchLedgerJSON|PatchLedger|PatchIds)\\b"
+      },
+      {
+        "id": "case-spec-table",
+        "regex": "\\bCASE_SPECS\\b"
+      },
+      {
+        "id": "geometry-truth-table",
+        "regex": "\\bGEOMETRIES\\b"
+      },
+      {
+        "id": "role-truth-table",
+        "regex": "\\bROLE_SCHEMES\\b"
+      },
+      {
+        "id": "expected-face-oracle",
+        "regex": "\\bexpected_faces\\b"
+      },
+      {
+        "id": "oracle-report",
+        "regex": "\\boracle_report\\b"
+      },
+      {
+        "id": "author-truth-marker",
+        "regex": "author[-_ ]truth"
+      },
+      {
+        "id": "reference-answer-marker",
+        "regex": "\\b(?:reference_answer|correct_answer|answer_key)\\b"
+      },
+      {
+        "id": "reference-lineage-function",
+        "regex": "\\b(?:initial_boundary_partition|advance_boundary|generated_patches)\\b"
+      },
+      {
+        "id": "author-tooling-name",
+        "regex": "\\b(?:build_fixtures|verify_harness|make_mutant|make_manifest)\\.py\\b"
+      },
+      {
+        "id": "credential-literal",
+        "regex": "(?:sk-ant-api[0-9A-Za-z_-]{8,}|sk-proj-[0-9A-Za-z_-]{8,}|(?:ANTHROPIC|OPENAI|CLAUDE)_API_KEY\\s*=\\s*[^\\s$<{]+)"
+      },
+      {
+        "id": "v0-reference-algorithm",
+        "regex": "clip live boundary patches at every stage"
+      },
+      {
+        "id": "author-patch-id",
+        "regex": "(?<![A-Za-z0-9_])(?:TL0|TL1|TR0|TR1|W3|W5L|W5R|W6|X2|X10|F0|F1)(?![A-Za-z0-9_])"
+      }
+    ],
+    "global_image_patterns": [
+      {
+        "id": "author-truth-marker",
+        "regex": "author[-_ ]truth"
+      },
+      {
+        "id": "removed-ledger-field",
+        "regex": "\\b(?:PatchLedgerJSON|PatchLedger|PatchIds)\\b"
+      },
+      {
+        "id": "v0-reference-algorithm",
+        "regex": "clip live boundary patches at every stage"
+      },
+      {
+        "id": "author-tooling-name",
+        "regex": "\\b(?:build_fixtures|verify_harness|make_mutant)\\.py\\b"
+      },
+      {
+        "id": "reference-lineage-function-set",
+        "regex": "(?s)(?=.*\\binitial_boundary_partition\\b)(?=.*\\badvance_boundary\\b)(?=.*\\bgenerated_patches\\b)"
+      },
+      {
+        "id": "truth-table-set",
+        "regex": "(?s)(?=.*\\bGEOMETRIES\\b)(?=.*\\bROLE_SCHEMES\\b)"
+      },
+      {
+        "id": "oracle-function-set",
+        "regex": "(?s)(?=.*\\bexpected_faces\\b)(?=.*\\boracle_report\\b)"
+      },
+      {
+        "id": "credential-literal",
+        "regex": "(?:sk-ant-api[0-9A-Za-z_-]{8,}|sk-proj-[0-9A-Za-z_-]{8,}|(?:ANTHROPIC|OPENAI|CLAUDE)_API_KEY\\s*=\\s*[^\\s$<{]+)"
+      }
+    ],
+    "max_scan_bytes": 2097152,
+    "strong_image_patterns": [
+      {
+        "id": "author-truth-marker",
+        "regex": "author[-_ ]truth"
+      },
+      {
+        "id": "case-spec-table",
+        "regex": "\\bCASE_SPECS\\b"
+      },
+      {
+        "id": "geometry-truth-table",
+        "regex": "\\bGEOMETRIES\\b"
+      },
+      {
+        "id": "role-truth-table",
+        "regex": "\\bROLE_SCHEMES\\b"
+      },
+      {
+        "id": "expected-face-oracle",
+        "regex": "\\bexpected_faces\\b"
+      },
+      {
+        "id": "oracle-report",
+        "regex": "\\boracle_report\\b"
+      },
+      {
+        "id": "reference-lineage-function",
+        "regex": "\\b(?:initial_boundary_partition|advance_boundary|generated_patches)\\b"
+      },
+      {
+        "id": "v0-reference-algorithm",
+        "regex": "clip live boundary patches at every stage"
+      },
+      {
+        "id": "credential-literal",
+        "regex": "(?:sk-ant-api[0-9A-Za-z_-]{8,}|sk-proj-[0-9A-Za-z_-]{8,}|(?:ANTHROPIC|OPENAI|CLAUDE)_API_KEY\\s*=\\s*[^\\s$<{]+)"
+      },
+      {
+        "id": "removed-ledger-field",
+        "regex": "\\b(?:PatchLedgerJSON|PatchLedger|PatchIds)\\b"
+      }
+    ]
+  }
+}

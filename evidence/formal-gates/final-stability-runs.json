@@ -1,0 +1,708 @@
+{
+  "generated_at": "2026-09-06T23:09:08Z",
+  "noop_partition_mutant": {
+    "job": "jobs/repair-freecad-lineage-surfaceframe-noop-mutant-v1",
+    "job_result_sha256": "3346f83358953df567ee3c09fed101f5fd26ff0dbe5829547bb7e03288b84bf1",
+    "trials": [
+      {
+        "artifact": {
+          "bytes": 24522,
+          "sha256": "dbc6578fb3e6a04ee4eaefe83179be2ad3f68766ded0a944b8a17159a404d3cf"
+        },
+        "exception": null,
+        "failed_reports": [
+          {
+            "failed_checks": [
+              "noop_preserves_atlas_partition"
+            ],
+            "report": "chain-01-noop.json",
+            "sha256": "2c1998606a8412150a9853f8bd43746cba4f0288e1f7b46aa2932f937532a5ba"
+          },
+          {
+            "failed_checks": [
+              "noop_preserves_atlas_partition"
+            ],
+            "report": "chain-02-noop.json",
+            "sha256": "2f53e1d9264500b2ef9f27dd4e71313259fb782af444266f8379cfe4a3a56242"
+          },
+          {
+            "failed_checks": [
+              "noop_preserves_atlas_partition"
+            ],
+            "report": "chain-03-noop.json",
+            "sha256": "c24968accf89a5375b821c716134e2d358663463812b8be625ee3aa60cc0e58b"
+          },
+          {
+            "failed_checks": [
+              "noop_preserves_atlas_partition"
+            ],
+            "report": "chain-04-noop.json",
+            "sha256": "8c5aabea7f5de941f30626822c9b73dfb8117edcf7a1ba4f6e672b1a9425a9bf"
+          },
+          {
+            "failed_checks": [
+              "noop_preserves_atlas_partition"
+            ],
+            "report": "chain-05-noop.json",
+            "sha256": "a10911950231f9b59a834b5bfd603019080ab37b1be7bbbfeacf6a0c8717df9e"
+          },
+          {
+            "failed_checks": [
+              "noop_preserves_atlas_partition"
+            ],
+            "report": "chain-06-noop.json",
+            "sha256": "a9b65edf23bd9779e17527bfb64f493a38464f9bada767c101d7f9087cd0def5"
+          }
+        ],
+        "finished_at": "2026-09-06T22:00:41.579685Z",
+        "job": "jobs/repair-freecad-lineage-surfaceframe-noop-mutant-v1",
+        "result_sha256": "16ce5a8b034c792994939fe24aaf8d29b609211c7244681d11caf0d9f3bbe41f",
+        "reward": 0.0,
+        "started_at": "2026-09-06T22:00:41.385128Z",
+        "task_checksum": "72e68d7fe2c242967daa756e05234e25b68b2051e89fa7f480c4ee6f404aba44",
+        "trial": "repair-freecad-lineage-noop-muta__UWLSWyY",
+        "usage": {
+          "cost_usd": null,
+          "n_cache_tokens": null,
+          "n_input_tokens": null,
+          "n_output_tokens": null
+        },
+        "verification": {
+          "failed": 6,
+          "passed": 17,
+          "reward_details_sha256": "4ff84847b4fc28c11c96cc847876e3ab5e111ea4428202b4b75ce6c2080c34f8",
+          "total": 23
+        }
+      }
+    ]
+  },
+  "nop_final3": {
+    "job": "jobs/repair-freecad-lineage-surfaceframe-nop-v1",
+    "job_result_sha256": "c1ef35343aed215758ea64f713c3064871a8c485232da9f0c032dd7d02afdc46",
+    "trials": [
+      {
+        "artifact": {
+          "bytes": 5919,
+          "sha256": "cdfbaeddd4d445d939cd6725b3aff1f5796262f5b0c172e66f1116a560defef8"
+        },
+        "exception": null,
+        "failed_reports": [
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle"
+            ],
+            "report": "chain-01-repair.json",
+            "sha256": "17e94032fd3da1d6bbf4730b96fd460cc48d95a202c5a2fd7a0f1cc628a71290"
+          },
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle"
+            ],
+            "report": "chain-02-repair.json",
+            "sha256": "c0ed837d505148fa56215ae1c57e60956ca68450e1931289581deb72ee8292b1"
+          },
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle",
+              "unknown_state_preserved"
+            ],
+            "report": "chain-03-repair.json",
+            "sha256": "d641c9fcf4e336b3a68e510adacf33a65a69024bf8ca67ababfaf250d9bfdcc5"
+          },
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle",
+              "unknown_state_preserved"
+            ],
+            "report": "chain-04-repair.json",
+            "sha256": "0199cac6fc10e8c3045b7daab4c5638c71ac19da2c26365db6f0f14eb19c9eff"
+          },
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle",
+              "unknown_state_preserved"
+            ],
+            "report": "chain-05-repair.json",
+            "sha256": "26bcecac4e4d017f5561b267242e9ef9525ef510dcb3b765441c1a0290e47543"
+          },
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle",
+              "unknown_state_preserved"
+            ],
+            "report": "chain-06-repair.json",
+            "sha256": "d7da6472d5bf51051d6b0e9bfafed9e113a40013493370780305d03e5d5deade"
+          }
+        ],
+        "finished_at": "2026-09-06T21:57:59.113643Z",
+        "job": "jobs/repair-freecad-lineage-surfaceframe-nop-v1",
+        "result_sha256": "2f0d8bebe9c30a78eb8f50636286b5333a9225b77c4ab08dd5d107260cbfc3b6",
+        "reward": 0.0,
+        "started_at": "2026-09-06T21:57:59.113512Z",
+        "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+        "trial": "repair-freecad-lineage__RuXh884",
+        "usage": {
+          "cost_usd": null,
+          "n_cache_tokens": null,
+          "n_input_tokens": null,
+          "n_output_tokens": null
+        },
+        "verification": {
+          "failed": 18,
+          "passed": 5,
+          "reward_details_sha256": "b4ef6a3985dbe8f0a8841164bfbaaeb18eb854c4ff080a020faf2758feffb0fc",
+          "total": 23
+        }
+      },
+      {
+        "artifact": {
+          "bytes": 5919,
+          "sha256": "cdfbaeddd4d445d939cd6725b3aff1f5796262f5b0c172e66f1116a560defef8"
+        },
+        "exception": null,
+        "failed_reports": [
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle"
+            ],
+            "report": "chain-01-repair.json",
+            "sha256": "ca1e620cee134266faef6a80b2862096eda57c7a68116fefe50a42354ad56332"
+          },
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle"
+            ],
+            "report": "chain-02-repair.json",
+            "sha256": "0198d1df70dca5d46a4c0968fcbfcad7ac179af93ab5d3bb864d8f1a9853fff0"
+          },
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle",
+              "unknown_state_preserved"
+            ],
+            "report": "chain-03-repair.json",
+            "sha256": "42cbf6f92385a91f6495668cc95adbc45c8a2bacf5ceb3b9489f87371442751e"
+          },
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle",
+              "unknown_state_preserved"
+            ],
+            "report": "chain-04-repair.json",
+            "sha256": "b238ca96104364c5777923a733aeec415500dcba70f7d74a333661f833cf38a7"
+          },
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle",
+              "unknown_state_preserved"
+            ],
+            "report": "chain-05-repair.json",
+            "sha256": "90f7405dc51157ff98b88b114a342e54a0298efb99a9af30c2d91e8062b1af40"
+          },
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle",
+              "unknown_state_preserved"
+            ],
+            "report": "chain-06-repair.json",
+            "sha256": "e212e2ec23fc750745c68a385362b4fd1f5734c59e4b1fa7556d22bd13073058"
+          }
+        ],
+        "finished_at": "2026-09-06T21:58:33.350766Z",
+        "job": "jobs/repair-freecad-lineage-surfaceframe-nop-v1",
+        "result_sha256": "24d12ed84a929fcd02dcee646b08192e72b823d6e263808fda2bebc5ffdfc961",
+        "reward": 0.0,
+        "started_at": "2026-09-06T21:58:33.350649Z",
+        "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+        "trial": "repair-freecad-lineage__ToRcCoV",
+        "usage": {
+          "cost_usd": null,
+          "n_cache_tokens": null,
+          "n_input_tokens": null,
+          "n_output_tokens": null
+        },
+        "verification": {
+          "failed": 18,
+          "passed": 5,
+          "reward_details_sha256": "aad424b5d34d7ccb6f2449ad52ee6a11c437e6e80f3eb7fefa13ce1248ee1a74",
+          "total": 23
+        }
+      },
+      {
+        "artifact": {
+          "bytes": 5919,
+          "sha256": "cdfbaeddd4d445d939cd6725b3aff1f5796262f5b0c172e66f1116a560defef8"
+        },
+        "exception": null,
+        "failed_reports": [
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle"
+            ],
+            "report": "chain-01-repair.json",
+            "sha256": "1894ab67a4851a04719e8d83ba29765467b678dce180ca7616824bf5509c0eaa"
+          },
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle"
+            ],
+            "report": "chain-02-repair.json",
+            "sha256": "db0ffccf4d1fe5daa21ab6498ce87e4374f8b3d720b0d2c8f7e76709f77edcfb"
+          },
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle",
+              "unknown_state_preserved"
+            ],
+            "report": "chain-03-repair.json",
+            "sha256": "a4efeef74194ea32cfd7142fa30de48efc7c19e8d0d8dc2d0a72be5cf6d29d3c"
+          },
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle",
+              "unknown_state_preserved"
+            ],
+            "report": "chain-04-repair.json",
+            "sha256": "c9310cb3acd385f94fed15e1dbeb1b79beba4d850dce0e707054a342a76b6c85"
+          },
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle",
+              "unknown_state_preserved"
+            ],
+            "report": "chain-05-repair.json",
+            "sha256": "8b9bd9d8db8f0a4ca0b2513eb6550dd14887e8a87cf0ca7556bb88d118b574e5"
+          },
+          {
+            "failed_checks": [
+              "atlas_is_disjoint_boundary_partition",
+              "consumer_geometry_matches_pristine_oracle",
+              "unknown_state_preserved"
+            ],
+            "report": "chain-06-repair.json",
+            "sha256": "04a3aae4324f0d4262bfa60601c33efd1bf2050cab5d157687b2ade5c0a2d0d2"
+          }
+        ],
+        "finished_at": "2026-09-06T21:57:59.365892Z",
+        "job": "jobs/repair-freecad-lineage-surfaceframe-nop-v1",
+        "result_sha256": "b87662e32e152fbaa238df520527299d894a327e3f60ad3e8a85c1586565c1fd",
+        "reward": 0.0,
+        "started_at": "2026-09-06T21:57:59.365695Z",
+        "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+        "trial": "repair-freecad-lineage__kQSTy4i",
+        "usage": {
+          "cost_usd": null,
+          "n_cache_tokens": null,
+          "n_input_tokens": null,
+          "n_output_tokens": null
+        },
+        "verification": {
+          "failed": 18,
+          "passed": 5,
+          "reward_details_sha256": "4a26a38b29a681f07075ac0d97d942ba838fa5a5d82b68486eaa70cc707864a6",
+          "total": 23
+        }
+      }
+    ]
+  },
+  "oracle_final10": {
+    "job": "jobs/repair-freecad-lineage-surfaceframe-oracle-final10",
+    "job_result_sha256": "49ece1c4b7baba65f50290a2f64eebd4a3c46dd389e365b03b791d15503893a9",
+    "trials": [
+      {
+        "artifact": {
+          "bytes": 22438,
+          "sha256": "8407e67ae756036d7e53b07627e2a2891108337565d4c34d918c7ab1ec36a0a2"
+        },
+        "exception": null,
+        "failed_reports": [],
+        "finished_at": "2026-09-06T22:16:31.209498Z",
+        "job": "jobs/repair-freecad-lineage-surfaceframe-oracle-final10",
+        "result_sha256": "f0ece11b1b8b19b724f043db3441ac59c6d8dc0837d24eaa5107e2334ce5a604",
+        "reward": 1.0,
+        "started_at": "2026-09-06T22:16:31.029157Z",
+        "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+        "trial": "repair-freecad-lineage__KrUK9uJ",
+        "usage": {
+          "cost_usd": null,
+          "n_cache_tokens": null,
+          "n_input_tokens": null,
+          "n_output_tokens": null
+        },
+        "verification": {
+          "failed": 0,
+          "passed": 23,
+          "reward_details_sha256": "f2db01de7b240f64cc6c5a791da723fa2ab311cb9af5377af92321011d5d398f",
+          "total": 23
+        }
+      },
+      {
+        "artifact": {
+          "bytes": 22438,
+          "sha256": "8407e67ae756036d7e53b07627e2a2891108337565d4c34d918c7ab1ec36a0a2"
+        },
+        "exception": null,
+        "failed_reports": [],
+        "finished_at": "2026-09-06T22:09:57.885801Z",
+        "job": "jobs/repair-freecad-lineage-surfaceframe-oracle-final10",
+        "result_sha256": "d43f1076bfa71239b1e1f251fbfe63ab021215c255de9c229f05f8644e21e887",
+        "reward": 1.0,
+        "started_at": "2026-09-06T22:09:57.684723Z",
+        "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+        "trial": "repair-freecad-lineage__Y9XAG8R",
+        "usage": {
+          "cost_usd": null,
+          "n_cache_tokens": null,
+          "n_input_tokens": null,
+          "n_output_tokens": null
+        },
+        "verification": {
+          "failed": 0,
+          "passed": 23,
+          "reward_details_sha256": "cd1213be82fa794d8397a6a7d22d3482d71cc35ed0f4091d30fbe9fba3ad0679",
+          "total": 23
+        }
+      },
+      {
+        "artifact": {
+          "bytes": 22438,
+          "sha256": "8407e67ae756036d7e53b07627e2a2891108337565d4c34d918c7ab1ec36a0a2"
+        },
+        "exception": null,
+        "failed_reports": [],
+        "finished_at": "2026-09-06T22:10:54.102179Z",
+        "job": "jobs/repair-freecad-lineage-surfaceframe-oracle-final10",
+        "result_sha256": "030169edc2593c6c0c77e01d0c6fe9c1cc575ef292680dbb70de0785c2975293",
+        "reward": 1.0,
+        "started_at": "2026-09-06T22:10:53.916975Z",
+        "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+        "trial": "repair-freecad-lineage__ZSzmzde",
+        "usage": {
+          "cost_usd": null,
+          "n_cache_tokens": null,
+          "n_input_tokens": null,
+          "n_output_tokens": null
+        },
+        "verification": {
+          "failed": 0,
+          "passed": 23,
+          "reward_details_sha256": "cc59fddc18b580d4abc23d1ce34e16fe972f28ccda7d507dce0ce97bb9d5fc10",
+          "total": 23
+        }
+      },
+      {
+        "artifact": {
+          "bytes": 22438,
+          "sha256": "8407e67ae756036d7e53b07627e2a2891108337565d4c34d918c7ab1ec36a0a2"
+        },
+        "exception": null,
+        "failed_reports": [],
+        "finished_at": "2026-09-06T22:13:42.655540Z",
+        "job": "jobs/repair-freecad-lineage-surfaceframe-oracle-final10",
+        "result_sha256": "f170f2e2813c8a43ef5075978ce72eb008f787b61cce98aa0a09d47dc44b9e64",
+        "reward": 1.0,
+        "started_at": "2026-09-06T22:13:42.475218Z",
+        "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+        "trial": "repair-freecad-lineage__bhe3oFY",
+        "usage": {
+          "cost_usd": null,
+          "n_cache_tokens": null,
+          "n_input_tokens": null,
+          "n_output_tokens": null
+        },
+        "verification": {
+          "failed": 0,
+          "passed": 23,
+          "reward_details_sha256": "5d3dad0113d7afcd9a49ab422e4237544e2037d9cef642f55fc203fba58f345a",
+          "total": 23
+        }
+      },
+      {
+        "artifact": {
+          "bytes": 22438,
+          "sha256": "8407e67ae756036d7e53b07627e2a2891108337565d4c34d918c7ab1ec36a0a2"
+        },
+        "exception": null,
+        "failed_reports": [],
+        "finished_at": "2026-09-06T22:18:23.639362Z",
+        "job": "jobs/repair-freecad-lineage-surfaceframe-oracle-final10",
+        "result_sha256": "e4a33193cb83c4e65f10e17152573880545534fab2305a320e598386352fbfd6",
+        "reward": 1.0,
+        "started_at": "2026-09-06T22:18:23.453784Z",
+        "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+        "trial": "repair-freecad-lineage__bxEYWem",
+        "usage": {
+          "cost_usd": null,
+          "n_cache_tokens": null,
+          "n_input_tokens": null,
+          "n_output_tokens": null
+        },
+        "verification": {
+          "failed": 0,
+          "passed": 23,
+          "reward_details_sha256": "0facc90439d1bf3609a6e833c5baf718e88c761284a2541bf6d5a71c3e9a6c85",
+          "total": 23
+        }
+      },
+      {
+        "artifact": {
+          "bytes": 22438,
+          "sha256": "8407e67ae756036d7e53b07627e2a2891108337565d4c34d918c7ab1ec36a0a2"
+        },
+        "exception": null,
+        "failed_reports": [],
+        "finished_at": "2026-09-06T22:15:35.117057Z",
+        "job": "jobs/repair-freecad-lineage-surfaceframe-oracle-final10",
+        "result_sha256": "62b57c7ef9c3c6ceb669f43ed9744996591cffae900f90bdbbc09844903d4686",
+        "reward": 1.0,
+        "started_at": "2026-09-06T22:15:34.936699Z",
+        "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+        "trial": "repair-freecad-lineage__dNP4sWK",
+        "usage": {
+          "cost_usd": null,
+          "n_cache_tokens": null,
+          "n_input_tokens": null,
+          "n_output_tokens": null
+        },
+        "verification": {
+          "failed": 0,
+          "passed": 23,
+          "reward_details_sha256": "ce33da9a828514d8f85579f048bbbeec160dcd136635422a055c08c567be4d41",
+          "total": 23
+        }
+      },
+      {
+        "artifact": {
+          "bytes": 22438,
+          "sha256": "8407e67ae756036d7e53b07627e2a2891108337565d4c34d918c7ab1ec36a0a2"
+        },
+        "exception": null,
+        "failed_reports": [],
+        "finished_at": "2026-09-06T22:17:27.385085Z",
+        "job": "jobs/repair-freecad-lineage-surfaceframe-oracle-final10",
+        "result_sha256": "59b0b47cedb9b06d21eae374b175392c23c685a9619b97a73be0d243cd3ce246",
+        "reward": 1.0,
+        "started_at": "2026-09-06T22:17:27.205154Z",
+        "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+        "trial": "repair-freecad-lineage__g5U4W5X",
+        "usage": {
+          "cost_usd": null,
+          "n_cache_tokens": null,
+          "n_input_tokens": null,
+          "n_output_tokens": null
+        },
+        "verification": {
+          "failed": 0,
+          "passed": 23,
+          "reward_details_sha256": "3875f873ad235733cc704ead0a36c1e00a83b2d7fce81af43ff0a43d417d50ab",
+          "total": 23
+        }
+      },
+      {
+        "artifact": {
+          "bytes": 22438,
+          "sha256": "8407e67ae756036d7e53b07627e2a2891108337565d4c34d918c7ab1ec36a0a2"
+        },
+        "exception": null,
+        "failed_reports": [],
+        "finished_at": "2026-09-06T22:12:46.487924Z",
+        "job": "jobs/repair-freecad-lineage-surfaceframe-oracle-final10",
+        "result_sha256": "6fbbc8b164b9bfcfffb33f92c773c1e44051ec6a9f911d0880d48f627f0e7a43",
+        "reward": 1.0,
+        "started_at": "2026-09-06T22:12:46.306933Z",
+        "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+        "trial": "repair-freecad-lineage__qmAbLY6",
+        "usage": {
+          "cost_usd": null,
+          "n_cache_tokens": null,
+          "n_input_tokens": null,
+          "n_output_tokens": null
+        },
+        "verification": {
+          "failed": 0,
+          "passed": 23,
+          "reward_details_sha256": "aabf8d646a545f2d8295f4e5646f8a8d378124f3d01aea2a155aa6f226cc1203",
+          "total": 23
+        }
+      },
+      {
+        "artifact": {
+          "bytes": 22438,
+          "sha256": "8407e67ae756036d7e53b07627e2a2891108337565d4c34d918c7ab1ec36a0a2"
+        },
+        "exception": null,
+        "failed_reports": [],
+        "finished_at": "2026-09-06T22:14:38.971753Z",
+        "job": "jobs/repair-freecad-lineage-surfaceframe-oracle-final10",
+        "result_sha256": "7756811f141a172896889d3a1e2ced1ecaedbbd2e30223bcbc8df1c53aa4a793",
+        "reward": 1.0,
+        "started_at": "2026-09-06T22:14:38.793413Z",
+        "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+        "trial": "repair-freecad-lineage__rcB4aav",
+        "usage": {
+          "cost_usd": null,
+          "n_cache_tokens": null,
+          "n_input_tokens": null,
+          "n_output_tokens": null
+        },
+        "verification": {
+          "failed": 0,
+          "passed": 23,
+          "reward_details_sha256": "e01af7c562eec05a84c7d8227f24a56f868381ed6e545f551ab1a4f04580921e",
+          "total": 23
+        }
+      },
+      {
+        "artifact": {
+          "bytes": 22438,
+          "sha256": "8407e67ae756036d7e53b07627e2a2891108337565d4c34d918c7ab1ec36a0a2"
+        },
+        "exception": null,
+        "failed_reports": [],
+        "finished_at": "2026-09-06T22:11:50.343607Z",
+        "job": "jobs/repair-freecad-lineage-surfaceframe-oracle-final10",
+        "result_sha256": "30d534491cd088c27d2d76db853781291353da472408f9906c4bc028e3816545",
+        "reward": 1.0,
+        "started_at": "2026-09-06T22:11:50.158538Z",
+        "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+        "trial": "repair-freecad-lineage__wwqqyNm",
+        "usage": {
+          "cost_usd": null,
+          "n_cache_tokens": null,
+          "n_input_tokens": null,
+          "n_output_tokens": null
+        },
+        "verification": {
+          "failed": 0,
+          "passed": 23,
+          "reward_details_sha256": "8b7c9258eabfd3336a150f7c37ba07be1aaa043e2b5d3b80557a3959360cbe39",
+          "total": 23
+        }
+      }
+    ]
+  },
+  "result": {
+    "noop_mutant_failed_checks": [
+      "noop_preserves_atlas_partition"
+    ],
+    "noop_mutant_reward": 0.0,
+    "nop_exceptions": 0,
+    "nop_rewards": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "oracle_exceptions": 0,
+    "oracle_rewards": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v4_success_control_failed_checks": [
+      "consumer_geometry_matches_pristine_oracle"
+    ],
+    "v4_success_control_reward": 0.0
+  },
+  "schema": "repair-freecad-lineage-stability-v5",
+  "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+  "v4_success_artifact_control": {
+    "job": "jobs/repair-freecad-lineage-surfaceframe-v4-success-control",
+    "job_result_sha256": "9871cfdc3505df20f78f68b264ef3b45ce3abf0c96e64c6f6b7d07085d85947e",
+    "trials": [
+      {
+        "artifact": {
+          "bytes": 16116,
+          "sha256": "c2821a34b1dd7ff57bdcb54a33bb69a7e77dacaf160abf201959306f348dc1a2"
+        },
+        "exception": null,
+        "failed_reports": [
+          {
+            "failed_checks": [
+              "consumer_geometry_matches_pristine_oracle"
+            ],
+            "report": "chain-01-repair.json",
+            "sha256": "7fd709bfbd4305cdc3120aea34e7a5896617186eb79298ac902fdfc2837b8dc4"
+          },
+          {
+            "failed_checks": [
+              "consumer_geometry_matches_pristine_oracle"
+            ],
+            "report": "chain-02-repair.json",
+            "sha256": "9ddc81c3880dfa146e7b3a96f50b32d2dfb42048ab1242743287a2986fda1561"
+          },
+          {
+            "failed_checks": [
+              "consumer_geometry_matches_pristine_oracle"
+            ],
+            "report": "chain-03-repair.json",
+            "sha256": "7d91020762786c3f4a079a12dddd63007c66817341b7e355a134e30aceea8e54"
+          },
+          {
+            "failed_checks": [
+              "consumer_geometry_matches_pristine_oracle"
+            ],
+            "report": "chain-04-update.json",
+            "sha256": "2fb8cb8f5fa6dc80f2198baf0d938f8540111351d24104d6a6c4f55039a22220"
+          },
+          {
+            "failed_checks": [
+              "consumer_geometry_matches_pristine_oracle"
+            ],
+            "report": "chain-05-repair.json",
+            "sha256": "9025b384a3e5f538ed6be84f7d4bde2b39c82fda92475aa0ccd5db0cbd91fa55"
+          },
+          {
+            "failed_checks": [
+              "consumer_geometry_matches_pristine_oracle"
+            ],
+            "report": "chain-06-repair.json",
+            "sha256": "f4c1fc09a5b1a1cc739f0e1fd41156f6eda248d4010125514bb5e668df0f1e0b"
+          }
+        ],
+        "finished_at": "2026-09-06T21:57:59.339458Z",
+        "job": "jobs/repair-freecad-lineage-surfaceframe-v4-success-control",
+        "result_sha256": "5a8f5b99f86a16d60250d3ddab07b33756e3ee0cbb0d9d6e0370293f8bce1a1f",
+        "reward": 0.0,
+        "started_at": "2026-09-06T21:57:59.121156Z",
+        "task_checksum": "707aa36da9f45b499a3b614ebfac03f213af47392e7d7e2f176963b0d9939d3d",
+        "trial": "repair-freecad-lineage-v4-succes__jckQcuR",
+        "usage": {
+          "cost_usd": null,
+          "n_cache_tokens": null,
+          "n_input_tokens": null,
+          "n_output_tokens": null
+        },
+        "verification": {
+          "failed": 17,
+          "passed": 6,
+          "reward_details_sha256": "d74aa64a9bfad91066c4d0caac210d6be58dcb4afa1b641cf226fce7d90c53cb",
+          "total": 23
+        }
+      }
+    ]
+  }
+}

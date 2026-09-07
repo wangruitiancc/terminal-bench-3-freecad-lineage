@@ -1,0 +1,33 @@
+{
+  "command_family": "scripts/checks/*.sh tasks/repair-freecad-lineage",
+  "failed": 0,
+  "generated_at": "2026-09-06T23:09:08Z",
+  "passed": 22,
+  "results": {
+    "check-allow-internet.sh": "pass",
+    "check-canary.sh": "pass",
+    "check-compose-host-binds.sh": "pass",
+    "check-dockerfile-platform.sh": "pass",
+    "check-dockerfile-references.sh": "pass",
+    "check-dockerfile-sanity.sh": "pass",
+    "check-gpu-types.sh": "pass",
+    "check-instruction-suffix.sh": "pass",
+    "check-no-allow-internet-true.sh": "pass",
+    "check-nproc.sh": "pass",
+    "check-pip-pinning.sh": "pass",
+    "check-pytest-version.sh": "pass",
+    "check-separate-verifier.sh": "pass",
+    "check-task-absolute-path.sh": "pass",
+    "check-task-fields.sh": "pass",
+    "check-task-package-name.sh": "pass",
+    "check-task-slug.sh": "pass",
+    "check-task-timeout.sh": "pass",
+    "check-test-file-references.sh": "pass",
+    "check-test-sh-sanity.sh": "pass",
+    "check-trial-network-fetch.sh": "pass",
+    "check-verifier-tooling-baked.sh": "pass"
+  },
+  "schema": "repair-freecad-lineage-static-checks-v5",
+  "status": "pass",
+  "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8"
+}

@@ -1,0 +1,79 @@
+{
+  "artifacts": {
+    "candidate-tree-scan.json": {
+      "path": "deliverables/freecad-lineage-formal-gates/candidate-tree-scan.json",
+      "sha256": "b1e1f5155f35e3dd0973898ab9f25f4df0ec216e5f5aa8abfefcc286bd47705e"
+    },
+    "codex-calibration.json": {
+      "path": "deliverables/freecad-lineage-formal-gates/codex-calibration.json",
+      "sha256": "8d0b497d9599e9fd33860cfe7acdf0bed80006a00a231432cbac9402400adba3"
+    },
+    "docker-save-scan.json": {
+      "path": "deliverables/freecad-lineage-formal-gates/docker-save-scan.json",
+      "sha256": "dbc73375b7d17c57c9777cf57035b985d3962b99f91533d37633f001602abee2"
+    },
+    "final-rootfs-scan.json": {
+      "path": "deliverables/freecad-lineage-formal-gates/final-rootfs-scan.json",
+      "sha256": "3638a8bb05af99cd76923f7023938fdfca916f52e7ec6c76acd92ec7d03d8373"
+    },
+    "final-stability-runs.json": {
+      "path": "deliverables/freecad-lineage-formal-gates/final-stability-runs.json",
+      "sha256": "13362c8d8d03465cbdc26086bab4736706b8f9e115c414a3b160b02cf2e5c69c"
+    },
+    "image-baseline.json": {
+      "path": "deliverables/freecad-lineage-formal-gates/image-baseline.json",
+      "sha256": "8db4feae84b1d46c2318dca75b8348416c7083d73ea97c92d9a5337e547489d2"
+    },
+    "implementation-rubric.json": {
+      "path": "deliverables/freecad-lineage-formal-gates/implementation-rubric.json",
+      "sha256": "d660a3be41b61e6cf90420902b3fac459159f3a21ec290a1e80a9d7c77a68e81"
+    },
+    "package-verification.json": {
+      "path": "deliverables/freecad-lineage-formal-gates/package-verification.json",
+      "sha256": "412668b661af5df1a6db1ea2abe60715344d3c92d560c0225f3a3b114904a02b"
+    },
+    "project-overview": {
+      "path": "deliverables/freecad-lineage-project-overview-zh.md",
+      "sha256": "97de5253f4842821464abcce85ef7cc939b78baadc2b2e383a6b7d4e9709f693"
+    },
+    "public-chain.json": {
+      "path": "deliverables/freecad-lineage-formal-gates/public-chain.json",
+      "sha256": "65c83a038e948aa6617b62ae700f7f067a6dd10f86cb7445af67b8bce42af945"
+    },
+    "static-checks.json": {
+      "path": "deliverables/freecad-lineage-formal-gates/static-checks.json",
+      "sha256": "9f2d544f9aaefbd4f1cfbe03c62fa8e41ecad97ff49fa079904f038d457330b7"
+    },
+    "submission-package": {
+      "path": "deliverables/repair-freecad-lineage-interview.zip",
+      "sha256": "8be679e6772af4aecc3c977d238cb293e68a3bf534e225dcf3db30c1ff2ad17f"
+    },
+    "task-checksums.json": {
+      "path": "deliverables/freecad-lineage-formal-gates/task-checksums.json",
+      "sha256": "d9dd3d5dd9fe6ed7e9686b60346ec6b68dcdd1a5c0e24e16e957ec0a779a5b41"
+    }
+  },
+  "checks": {
+    "candidate_scans_zero_findings": true,
+    "codex_gpt_5_6_sol_xhigh_valid_failures_3_of_3": true,
+    "deterministic_package_matches_task_tree": true,
+    "excluded_network_trial_not_counted": true,
+    "implementation_rubric_34_pass_1_na_0_fail": true,
+    "noop_mutant_precise_failure": true,
+    "nop_3_of_3_rejected": true,
+    "oracle_10_of_10": true,
+    "oracle_exceptions_zero": true,
+    "public_chain_3_of_3": true,
+    "static_checks_22_of_22": true,
+    "v4_success_artifact_rejected": true,
+    "verifier_exact_files_no_pycache": true
+  },
+  "difficulty_established": true,
+  "generated_at": "2026-09-06T23:09:08Z",
+  "model_calibration_complete": true,
+  "model_calibration_ready": true,
+  "next_action": "Submit the deterministic task package and evidence; optionally rerun the same checksum on an authorized Claude environment if the evaluator requests it.",
+  "schema": "repair-freecad-lineage-formal-gate-summary-v5",
+  "status": "pass",
+  "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8"
+}

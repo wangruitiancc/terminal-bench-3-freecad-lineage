@@ -1,0 +1,66 @@
+{
+  "candidate_image_id": "sha256:4c6df62de2f2d9baa6873f09b24ad8e0332c8fd5a54477334230b05dad4d6b20",
+  "expected_input_sha256": "0a1981765603b5d617a914dc74f98449acd825c473785adcffc2cca54d490871",
+  "generated_at": "2026-09-06T23:09:08Z",
+  "input_sha256": "0a1981765603b5d617a914dc74f98449acd825c473785adcffc2cca54d490871",
+  "phases": {
+    "noop": {
+      "accepted": true,
+      "checks": {
+        "atlas_public_regions": true,
+        "coat_public_regions": true,
+        "document_structure": true,
+        "final_geometry": true,
+        "flat_native_atlas": true,
+        "master_public_regions": true,
+        "master_slave_disjoint": true,
+        "noop_baseline_present": true,
+        "noop_preserves_atlas": true,
+        "noop_preserves_final": true,
+        "pressure_public_regions": true,
+        "result_geometry": true,
+        "slave_public_regions": true
+      },
+      "failed_checks": [],
+      "report_sha256": "020b5839d72be40c7139304a20979cb42883850f8bc55075a4cfd606b4223cb7"
+    },
+    "repair": {
+      "accepted": true,
+      "checks": {
+        "atlas_public_regions": true,
+        "coat_public_regions": true,
+        "document_structure": true,
+        "final_geometry": true,
+        "flat_native_atlas": true,
+        "master_public_regions": true,
+        "master_slave_disjoint": true,
+        "pressure_public_regions": true,
+        "repair_preserves_saved_final": true,
+        "result_geometry": true,
+        "slave_public_regions": true
+      },
+      "failed_checks": [],
+      "report_sha256": "7be9b5a4d1508cfa7e79cb93e8f8a379c0d3cc0ec9d35c7a3879565867c7ff27"
+    },
+    "update": {
+      "accepted": true,
+      "checks": {
+        "atlas_public_regions": true,
+        "coat_public_regions": true,
+        "document_structure": true,
+        "final_geometry": true,
+        "flat_native_atlas": true,
+        "master_public_regions": true,
+        "master_slave_disjoint": true,
+        "pressure_public_regions": true,
+        "result_geometry": true,
+        "slave_public_regions": true
+      },
+      "failed_checks": [],
+      "report_sha256": "729012d71b07cf6a27ec4500f6ec9f10160310036afd650885391cb775ddd2e3"
+    }
+  },
+  "schema": "repair-freecad-lineage-public-chain-v5",
+  "status": "pass",
+  "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8"
+}

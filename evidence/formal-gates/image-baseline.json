@@ -1,0 +1,47 @@
+{
+  "candidate": {
+    "final_rootfs_inventory_sha256": "bf5c6d58a3bcfd9b8b83467f65c38fa5a2322145642f6740c33317ea3bba8391",
+    "history_canonical_sha256": "dd20b6ba854422d10247902a07e4babc8a3f3440ac07ea4897124aced42e34eb",
+    "id": "sha256:4c6df62de2f2d9baa6873f09b24ad8e0332c8fd5a54477334230b05dad4d6b20",
+    "image_config_canonical_sha256": "e067662bd9931bf71889246995d3077e90df36b3f5fbd08b2589377275f04c82",
+    "runtime_config_canonical_sha256": "a9160087592a7c25764bd56cdc81a5c0e4fc0fce553de5ff2119ec3a4331590e",
+    "tag": "repair-freecad-lineage-env:formal-v8-surfaceframe",
+    "task_diff_ids": [
+      "sha256:abde12fb81a79d0e39268b9d259721536e024bc5c0fd1c495f1092be62c02983",
+      "sha256:b83e51798c8b7538efaa2aa2d0a98ad4763d1ac2d975f962377e491610b9f20c",
+      "sha256:28cc2c891be4862872c3a51d9186dc380ee0e2f50c3c5254a6503560dae5f368"
+    ]
+  },
+  "generated_at": "2026-09-06T23:09:08Z",
+  "scans": {
+    "candidate-tree-scan.json": {
+      "finding_count": 0,
+      "path": "deliverables/freecad-lineage-formal-gates/candidate-tree-scan.json",
+      "scope": "candidate-tree",
+      "sha256": "b1e1f5155f35e3dd0973898ab9f25f4df0ec216e5f5aa8abfefcc286bd47705e",
+      "status": "pass"
+    },
+    "docker-save-scan.json": {
+      "finding_count": 0,
+      "path": "deliverables/freecad-lineage-formal-gates/docker-save-scan.json",
+      "scope": "docker-save",
+      "sha256": "dbc73375b7d17c57c9777cf57035b985d3962b99f91533d37633f001602abee2",
+      "status": "pass"
+    },
+    "final-rootfs-scan.json": {
+      "finding_count": 0,
+      "path": "deliverables/freecad-lineage-formal-gates/final-rootfs-scan.json",
+      "scope": "tar-final-rootfs",
+      "sha256": "3638a8bb05af99cd76923f7023938fdfca916f52e7ec6c76acd92ec7d03d8373",
+      "status": "pass"
+    }
+  },
+  "schema": "repair-freecad-lineage-image-baseline-v5",
+  "status": "pass",
+  "verifier": {
+    "exact_file_count": 21,
+    "id": "sha256:a776063f3009a81c48ee86b3281be0eecb6d00bd11474a28aa655f82dc101afb",
+    "pycache_or_pyc_count": 0,
+    "tag": "repair-freecad-lineage-tests:formal-v9-surfaceframe"
+  }
+}

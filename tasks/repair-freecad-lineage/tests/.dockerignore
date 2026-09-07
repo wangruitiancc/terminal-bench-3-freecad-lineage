@@ -1,0 +1,16 @@
+*
+!Dockerfile
+!checker.py
+!run_verifier.py
+!source-stamp.json
+!test.sh
+!write_failure.py
+!isolation/
+!isolation/leakscan.py
+!isolation/policy.json
+!private/
+!private/empty.json
+!private/edits/
+!private/edits/*.json
+!private/scenes/
+!private/scenes/*.FCStd

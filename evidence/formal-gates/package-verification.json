@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-09-06T23:09:08Z",
+  "package": {
+    "credential_value_scan": {
+      "complete_secret_hits": [],
+      "explained_prefix_only_match": {
+        "file": "tests/isolation/policy.json",
+        "literal": "sk-ant-api",
+        "purpose": "forbidden-pattern rule used by the leak scanner"
+      },
+      "status": "pass"
+    },
+    "exact_task_hash_match": true,
+    "file_count": 34,
+    "normalized_timestamp": "1980-01-01T00:00:00",
+    "path": "deliverables/repair-freecad-lineage-interview.zip",
+    "root_prefix": "repair-freecad-lineage/",
+    "sha256": "8be679e6772af4aecc3c977d238cb293e68a3bf534e225dcf3db30c1ff2ad17f",
+    "sha256_file": "deliverables/repair-freecad-lineage-interview.zip.sha256"
+  },
+  "schema": "repair-freecad-lineage-package-verification-v5",
+  "status": "pass",
+  "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8"
+}

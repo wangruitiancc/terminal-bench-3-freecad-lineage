@@ -1,0 +1,163 @@
+{
+  "checks": {
+    "agentic": {
+      "explanation": "Solving requires inspecting a native CAD document and contract, running multi-phase CLI/checker workflows, diagnosing geometric and persistence failures, and iterating on a substantial source file.",
+      "outcome": "pass"
+    },
+    "anti_cheat_robustness": {
+      "explanation": "Only the source artifact crosses into a root-owned separate verifier; private scenes and oracle code remain root-only, inputs are pristine and hashed, outputs are preflighted, and cached ledgers, extra schema, executable payloads, and framework tampering are blocked.",
+      "outcome": "pass"
+    },
+    "artifact_efficiency": {
+      "explanation": "The only artifact is the inherently small, agent-produced /app/face_lineage.py deliverable, so no baseline tree, dependency directory, or fixed large asset is transferred.",
+      "outcome": "not_applicable"
+    },
+    "binary_reward": {
+      "explanation": "Every reward-writing path emits only 0.0 or 1.0: normal scoring thresholds on any failed test, and the crash fallback writes 0.0.",
+      "outcome": "pass"
+    },
+    "category_and_tags": {
+      "explanation": "Hardware / CAD reflects the primary domain, and the tags specifically identify FreeCAD, topology, surface lineage, parametric repair, and metamorphic testing.",
+      "outcome": "pass"
+    },
+    "ctrf_reporting": {
+      "explanation": "The bespoke verifier publishes named per-chain and infrastructure checks in CTRF format at /logs/verifier/ctrf.json, including a valid failure CTRF if the entrypoint crashes.",
+      "outcome": "pass"
+    },
+    "deterministic_reproducible": {
+      "explanation": "Base images are digest-pinned, conda package versions are pinned, fixtures and verifier payloads are hash-frozen, inputs are local, and geometric comparisons use documented tolerances that ignore benign ordering and subdivision variation.",
+      "outcome": "pass"
+    },
+    "difficult": {
+      "explanation": "Correctly maintaining temporal surface provenance across OpenCASCADE Booleans, multiple rigid frames, native FreeCAD links, and topology-preserving edits requires substantial CAD-kernel and FreeCAD experience.",
+      "outcome": "pass"
+    },
+    "difficulty_explanation_quality": {
+      "explanation": "The metadata clearly identifies temporal provenance, coincident-but-distinct surfaces, multiple frames, and native link semantics, states that fixtures are synthetic but realistic, and names the relevant real-world engineering roles.",
+      "outcome": "pass"
+    },
+    "do_not_modify_enforced": {
+      "explanation": "Input/edit hashes enforce byte immutability; pristine-state, schema, ID, shape, graph, archive, and no-op comparisons enforce the concrete preserve/no-add/no-delete constraints, with verifier-owned pristine inputs preventing beneficial tampering.",
+      "outcome": "pass"
+    },
+    "environment_hygiene": {
+      "explanation": "The agent image contains only the starter and candidate-facing public assets, while private checks and verifier-only tools stay in the verifier image; both Dockerfiles manage apt correctly and test.sh performs no installs.",
+      "outcome": "pass"
+    },
+    "essential_difficulty": {
+      "explanation": "The central challenge is temporal geometric reasoning and coordinate-frame composition, not formatting or arbitrary precision; the output envelope is mechanically produced by normal FreeCAD saving.",
+      "outcome": "pass"
+    },
+    "expert_time_estimate": {
+      "explanation": "The nonzero eight-hour estimate is plausible for a focused expert implementing and validating this specialized but deliberately bounded FreeCAD lineage algorithm.",
+      "outcome": "pass"
+    },
+    "functional_verification": {
+      "explanation": "The verifier executes the submitted CLI, reopens its FCStd outputs with FreeCAD, recomputes oracle geometry, resolves native links, and compares document state; source scanning is limited to artifact validity and safety.",
+      "outcome": "pass"
+    },
+    "instruction_concision": {
+      "explanation": "The candidate instruction is concise, uses absolute paths, states the outcome first, and delegates necessary domain/schema detail to one clearly identified authoritative contract without prescribing implementation steps.",
+      "outcome": "pass"
+    },
+    "interesting": {
+      "explanation": "Persistent face naming and repair of downstream CAD/CAE references is a genuine professional problem in parametric modeling, simulation preprocessing, and CAD automation.",
+      "outcome": "pass"
+    },
+    "no_extraneous_files": {
+      "explanation": "Every listed file is referenced by a Docker build, instruction, reference solution, verifier, integrity stamp, or required task scaffold; the intentionally duplicated public/private fixture is consumed in both contexts and byte-matches.",
+      "outcome": "pass"
+    },
+    "novel": {
+      "explanation": "This is a custom FreeCAD persistent-lineage scenario combining temporal Boolean provenance, independent surface frames, and native downstream references, not a standard textbook or memorized algorithm.",
+      "outcome": "pass"
+    },
+    "outcome_verified": {
+      "explanation": "The task specifies the resulting document behavior and invariants, while allowing alternate atlas face order and legal subdivisions; tests do not require a particular implementation strategy.",
+      "outcome": "pass"
+    },
+    "resource_configuration": {
+      "explanation": "The eight-hour agent timeout matches the expert estimate, the 30-minute verifier allowance covers 18 small CAD phases, and 2 CPUs, 4 GiB RAM, no GPU, and 10 GiB storage are reasonable for FreeCAD rather than artificially computational.",
+      "outcome": "pass"
+    },
+    "reviewable": {
+      "explanation": "Although specialized, the contract and metadata explain the semantics, and the checker derives expected geometry and lineage from pristine native inputs rather than relying on unexplained hardcoded answers.",
+      "outcome": "pass"
+    },
+    "separate_verifier_configured": {
+      "explanation": "The verifier reads only the declared source artifact and files baked under /tests, pre-installs FreeCAD and process tools in its image, and the sole agent/verifier duplicated scene is byte-identical.",
+      "outcome": "pass"
+    },
+    "solution_explanation_quality": {
+      "explanation": "The explanation concisely describes stagewise boundary intersection, uncovered-region attribution through SurfaceFrame, world transformation, native link resolution, and repeat-state rebuilding, matching the reference code.",
+      "outcome": "pass"
+    },
+    "solution_quality": {
+      "explanation": "The short solve script installs a separate 546-line implementation that genuinely computes Boolean boundary lineage and repairs native document state; it does not emit a precomputed final answer or hide large code in a heredoc.",
+      "outcome": "pass"
+    },
+    "solvable": {
+      "explanation": "A substantive reference implementation is provided and implements the documented geometric propagation, edit, native-link repair, and save workflow; its scope is feasible for a prepared CAD automation expert within one workday.",
+      "outcome": "pass"
+    },
+    "structured_data_schema": {
+      "explanation": "The contract normatively specifies the exact REPEAT_CUT JSON fields, accepted empty object, native FreeCAD object/property types, atlas structure, links, and ordinary FCStd archive profile.",
+      "outcome": "pass"
+    },
+    "task_name": {
+      "explanation": "The task slug repair-freecad-lineage is descriptive, lowercase kebab-case, specific to the core challenge, and exactly three tokens.",
+      "outcome": "pass"
+    },
+    "task_readme": {
+      "explanation": "The README adds maintainer-specific design constraints, freeze procedures, and regression history beyond the candidate contract and metadata, so it provides useful development context rather than misleading duplication.",
+      "outcome": "pass"
+    },
+    "task_security": {
+      "explanation": "All scripts and data are task-scoped and unobfuscated. There is no credential access, network exfiltration, untrusted script execution, destructive behavior, or host escape attempt; Docker-socket access appears only as a negative isolation probe.",
+      "outcome": "pass"
+    },
+    "task_toml_schema": {
+      "explanation": "task.toml uses recognized root, task, metadata, verifier, agent, environment, and solution fields only; no invented configuration keys are present.",
+      "outcome": "pass"
+    },
+    "test_instruction_alignment": {
+      "explanation": "Assertions trace to the contract's CLI, archive, topology, lineage, role selection, edit, idempotency, process, and preservation requirements, and the material requirements are all exercised across the three phases.",
+      "outcome": "pass"
+    },
+    "typos": {
+      "explanation": "No mismatched filenames, paths, command names, phase names, or critical property identifiers were found; JSON, TOML, and all Python sources parse successfully and packaged hashes match.",
+      "outcome": "pass"
+    },
+    "verifiable": {
+      "explanation": "Verification is deterministic and programmatic: six serial scene chains execute repair, update, and no-op phases, with independent geometry/state checks, bounded processes, frozen fixture hashes, no live services, and no runtime dependency installs.",
+      "outcome": "pass"
+    },
+    "verification_explanation_quality": {
+      "explanation": "The metadata accurately describes the separate-process chains, safety preflight, independent oracle, topology/state/link checks, and no-op comparison, and it justifies both numeric tolerances with round-trip and alternate-implementation calibration.",
+      "outcome": "pass"
+    },
+    "verifier_execution_isolation": {
+      "explanation": "Submitted Python runs as UID 2001 with no-new-privileges and resource limits, logs go to files, descendants are killed, /logs/verifier is root-only before execution, and root alone converts child/checker results into reward files.",
+      "outcome": "pass"
+    }
+  },
+  "counts": {
+    "fail": 0,
+    "not_applicable": 1,
+    "pass": 34
+  },
+  "error": null,
+  "generated_at": "2026-09-06T23:09:08Z",
+  "job": "jobs/repair-freecad-lineage-surfaceframe-rubric-v1",
+  "reviewer": {
+    "agent": "codex",
+    "cost_usd": 1.9639816000000005,
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "high"
+  },
+  "schema": "repair-freecad-lineage-implementation-rubric-v5",
+  "source_report_sha256": "5d119977c928913aa7bb836d9e6e37a28a7a601f05559539afdd5fa86f6a0ea2",
+  "status": "pass",
+  "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+  "total": 35
+}

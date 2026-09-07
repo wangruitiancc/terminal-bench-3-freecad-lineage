@@ -1,0 +1,227 @@
+{
+  "agent": "codex",
+  "agent_version": "0.153.4",
+  "candidate_image_id": "sha256:4c6df62de2f2d9baa6873f09b24ad8e0332c8fd5a54477334230b05dad4d6b20",
+  "classification": "difficulty_established",
+  "excluded_infrastructure_trials": [
+    {
+      "classification": "excluded_infrastructure_failure_before_model_execution",
+      "exception_type": "NetworkConnectionError",
+      "job": "jobs/repair-freecad-lineage-surfaceframe-codex-final",
+      "reason": "TLS EOF while the agent setup attempted to download NVM; agent_execution and verifier_result were absent",
+      "result_sha256": "1c6e16cb9ffa5799098f4698e785d79268da90f1bcc1d30fa1c695c0bfc3b61b",
+      "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+      "trial": "repair-freecad-lineage__RFasabc"
+    }
+  ],
+  "failure_signature": {
+    "affected_private_chains": [
+      "chain-03",
+      "chain-04",
+      "chain-05",
+      "chain-06"
+    ],
+    "failed_checks_each": 12,
+    "observed_mismatch": "LineageFaces.Placement was reset to identity when the atlas Shape was replaced; update and no-op phases then failed through the sequential prerequisite.",
+    "passed_checks_each": 11,
+    "primary_failed_checker": "unknown_state_preserved",
+    "same_in_all_valid_trials": true,
+    "surface_frame_semantics": "All three valid submissions passed the geometry, temporal lineage, and consumer checks before the protected-state mismatch."
+  },
+  "generated_at": "2026-09-06T23:09:08Z",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "result": {
+    "exceptions_in_valid_trials": 0,
+    "mean_reward": 0.0,
+    "pass_at_3": 0.0,
+    "valid_failures": 3,
+    "valid_successes": 0,
+    "valid_trials": 3
+  },
+  "schema": "repair-freecad-lineage-codex-calibration-v5",
+  "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+  "totals": {
+    "cache_tokens": 4912896,
+    "cost_usd": 4.794486399999999,
+    "input_tokens": 5128048,
+    "output_tokens": 98436
+  },
+  "valid_trials": [
+    {
+      "artifact": {
+        "bytes": 13192,
+        "sha256": "7def3efa7b756e19e5b2ae2ba0daf53dc255ef9514c51199eb2013342142a401"
+      },
+      "codex_log_sha256": "396caa3e7c8d59017297e7dc2f459e5c681bf19a165c31b24e09e8857f5f88dc",
+      "exception": null,
+      "failed_reports": [
+        {
+          "failed_checks": [
+            "unknown_state_preserved"
+          ],
+          "report": "chain-03-repair.json",
+          "sha256": "841fe8f3a4104f327a5578872a540a51b7095b9e9908ab534361a3da74d92c31"
+        },
+        {
+          "failed_checks": [
+            "unknown_state_preserved"
+          ],
+          "report": "chain-04-repair.json",
+          "sha256": "3daac5b6794328e4b69ab7a019e89a82f5abdabcedf5875a8797413ef9632ac7"
+        },
+        {
+          "failed_checks": [
+            "unknown_state_preserved"
+          ],
+          "report": "chain-05-repair.json",
+          "sha256": "1df47678503590d35d1e3006caf59002134fc6be8d37d103914e2f614eedf607"
+        },
+        {
+          "failed_checks": [
+            "unknown_state_preserved"
+          ],
+          "report": "chain-06-repair.json",
+          "sha256": "559208dcff55f9794bb05c70fde7e145317258c8fa9de987c61eae98cc8b7232"
+        }
+      ],
+      "finished_at": "2026-09-06T22:32:59.546151Z",
+      "job": "jobs/repair-freecad-lineage-surfaceframe-codex-final",
+      "result_sha256": "93dc9a3435c1ef032fb5453f7cc15f3e318850b335271b55dd7b47dc802ef418",
+      "reward": 0.0,
+      "started_at": "2026-09-06T22:20:55.655722Z",
+      "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+      "trajectory_sha256": "5503eedb6657580ee07c17d29c47afc47bfcbfb3c62fb563b6bbae7521f265c6",
+      "trial": "repair-freecad-lineage__PpKXYU2",
+      "usage": {
+        "cost_usd": 1.4319175999999998,
+        "n_cache_tokens": 1359744,
+        "n_input_tokens": 1428979,
+        "n_output_tokens": 30554
+      },
+      "verification": {
+        "failed": 12,
+        "passed": 11,
+        "reward_details_sha256": "33fbaf9a96b6805ae95643977534c08dc101167ea674c1970f7f03003117ca70",
+        "total": 23
+      }
+    },
+    {
+      "artifact": {
+        "bytes": 15478,
+        "sha256": "69026eb1a3b7e0ef3fdd8c9668a712e603f315d1d6e02a70d1d5bff4af73f99e"
+      },
+      "codex_log_sha256": "62df0b57eee6fb4d291f1498e8f46e131249e1f8d8df203d88a4f5d243ddfbff",
+      "exception": null,
+      "failed_reports": [
+        {
+          "failed_checks": [
+            "unknown_state_preserved"
+          ],
+          "report": "chain-03-repair.json",
+          "sha256": "37511719e4d71125152c3f05f962f538248d96573c70a721ff80322d50e27341"
+        },
+        {
+          "failed_checks": [
+            "unknown_state_preserved"
+          ],
+          "report": "chain-04-repair.json",
+          "sha256": "0e43e68c3db820c1a53bfe1790b233107c909a66165a93ee43c2117673d5f5cf"
+        },
+        {
+          "failed_checks": [
+            "unknown_state_preserved"
+          ],
+          "report": "chain-05-repair.json",
+          "sha256": "7f67ba00f163d7a6b9805130c2f729a35d269c63b95ce8ff9f50aa56b47c52d5"
+        },
+        {
+          "failed_checks": [
+            "unknown_state_preserved"
+          ],
+          "report": "chain-06-repair.json",
+          "sha256": "78182580b6e2ed4ce063ed7d0aac20d99540fd8969d8c64fc11bd8c53f434742"
+        }
+      ],
+      "finished_at": "2026-09-06T22:49:06.980562Z",
+      "job": "jobs/repair-freecad-lineage-surfaceframe-codex-final",
+      "result_sha256": "069b1df861329dc32476ba3c6d20e50f3d9ef1b3c33d42bbac65bdc061c403d7",
+      "reward": 0.0,
+      "started_at": "2026-09-06T22:36:27.181654Z",
+      "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+      "trajectory_sha256": "3bb7fdf907e327a25b2975ec49c51631819895de7fcc3db2a8d6823f8e64b9bc",
+      "trial": "repair-freecad-lineage__r6Gabem",
+      "usage": {
+        "cost_usd": 1.8375136,
+        "n_cache_tokens": 1985024,
+        "n_input_tokens": 2061030,
+        "n_output_tokens": 36974
+      },
+      "verification": {
+        "failed": 12,
+        "passed": 11,
+        "reward_details_sha256": "49f5d63caf0e370134e088e6310ef4c089938b9b77060080834d751646b1bb4d",
+        "total": 23
+      }
+    },
+    {
+      "artifact": {
+        "bytes": 12918,
+        "sha256": "12e4c54623faae5ff8f8ce2ae46bd0be32fe3b177a612edf3a1578b298252992"
+      },
+      "codex_log_sha256": "0b2883e61ae1ba6a4226310f294403040e4d5d018c0b4c4f0f9e65b3bf837986",
+      "exception": null,
+      "failed_reports": [
+        {
+          "failed_checks": [
+            "unknown_state_preserved"
+          ],
+          "report": "chain-03-repair.json",
+          "sha256": "809cd722ecb79435ce6dff03ac57cf821fb4c78c01d4f176cef75e64d01471ed"
+        },
+        {
+          "failed_checks": [
+            "unknown_state_preserved"
+          ],
+          "report": "chain-04-repair.json",
+          "sha256": "c0e3a97678422efdd0c7ea2d0c4961be09330167bebb597194d70edf31c6e92a"
+        },
+        {
+          "failed_checks": [
+            "unknown_state_preserved"
+          ],
+          "report": "chain-05-repair.json",
+          "sha256": "67f26bcaa9133578907dc5b610994826836f131fee57d1801c92bf9cfc85ca40"
+        },
+        {
+          "failed_checks": [
+            "unknown_state_preserved"
+          ],
+          "report": "chain-06-repair.json",
+          "sha256": "b19703460255ad290283f4db9b41ae5b922587d0c168a1d915743e5ad2ea3ab6"
+        }
+      ],
+      "finished_at": "2026-09-06T23:04:15.678351Z",
+      "job": "jobs/repair-freecad-lineage-surfaceframe-codex-final-extra1",
+      "result_sha256": "ef62ed9b5821033f945b56b8024c84aea51d0b6e4447bcd73b652ab8a7a30b93",
+      "reward": 0.0,
+      "started_at": "2026-09-06T22:51:54.528580Z",
+      "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+      "trajectory_sha256": "88eaf7c5ee26a23d5b773316e966760e37198683652bf1409e640fad9710d6b3",
+      "trial": "repair-freecad-lineage__FoGTya5",
+      "usage": {
+        "cost_usd": 1.5250552,
+        "n_cache_tokens": 1568128,
+        "n_input_tokens": 1638039,
+        "n_output_tokens": 30908
+      },
+      "verification": {
+        "failed": 12,
+        "passed": 11,
+        "reward_details_sha256": "26297dc5965456e4eaac78071287368eceb0e3f4cdd712d60283bdedba40fdba",
+        "total": 23
+      }
+    }
+  ],
+  "verifier_image_id": "sha256:a776063f3009a81c48ee86b3281be0eecb6d00bd11474a28aa655f82dc101afb"
+}

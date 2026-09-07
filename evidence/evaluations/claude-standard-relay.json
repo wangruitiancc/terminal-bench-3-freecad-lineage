@@ -1,0 +1,84 @@
+{
+  "schema": "repair-freecad-lineage-claude-standard-relay-v2",
+  "generated_at": "2026-09-07T09:00:00Z",
+  "task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+  "agent": "claude-code",
+  "agent_version": "2.1.263",
+  "model_requested": "claude-opus-5",
+  "model_observed": "claude-opus-5",
+  "reasoning_effort": "max",
+  "credential_route": "third-party Anthropic-compatible relay; not official Anthropic endpoint evidence",
+  "summary": {
+    "valid_trials": 3,
+    "valid_failures": 3,
+    "valid_successes": 0,
+    "exceptions_in_valid_trials": 0,
+    "mean_reward": 0.0
+  },
+  "valid_trials": [
+    {
+      "job": "jobs/repair-freecad-lineage-claude-relay-3x-v5b",
+      "trial": "repair-freecad-lineage__YezPeQV",
+      "reward": 0.0,
+      "exception": null,
+      "verification": {
+        "passed": 7,
+        "failed": 16,
+        "total": 23
+      },
+      "failure_signature": "identity scenes failed update atlas partition; transformed scenes failed unknown_state_preserved"
+    },
+    {
+      "job": "jobs/repair-freecad-lineage-claude-relay-strategyhub-add2-v5",
+      "trial": "repair-freecad-lineage__x6StV3Z",
+      "reward": 0.0,
+      "exception": null,
+      "verification": {
+        "passed": 7,
+        "failed": 16,
+        "total": 23
+      },
+      "failure_signature": "identity scenes failed update atlas partition; transformed scenes failed unknown_state_preserved"
+    },
+    {
+      "job": "jobs/repair-freecad-lineage-claude-relay-local-proxy-final1-v5",
+      "trial": "repair-freecad-lineage__ULmLCPY",
+      "reward": 0.0,
+      "exception": null,
+      "verification": {
+        "passed": 5,
+        "failed": 18,
+        "total": 23
+      },
+      "failure_signature": "all six repair scenes failed atlas partition and consumer geometry"
+    }
+  ],
+  "excluded_infrastructure_trials": [
+    {
+      "trial": "repair-freecad-lineage__PqAq8c4",
+      "exception_type": "UnknownApiError",
+      "reason": "relay HTTP 500/503 during execution"
+    },
+    {
+      "trial": "repair-freecad-lineage__Kp8UVAr",
+      "exception_type": "UnknownApiError",
+      "reason": "relay HTTP 503 before first response"
+    },
+    {
+      "trial": "repair-freecad-lineage__YLGa7k4",
+      "exception_type": "NetworkConnectionError",
+      "reason": "TLS EOF while installing Claude Code"
+    },
+    {
+      "trial": "repair-freecad-lineage__RDafWtJ",
+      "exception_type": "UnknownApiError",
+      "reason": "relay account preauthorization rejected for insufficient balance"
+    },
+    {
+      "trial": "repair-freecad-lineage__pF6htXM",
+      "exception_type": "UnknownApiError",
+      "reason": "relay account preauthorization rejected for insufficient balance"
+    }
+  ],
+  "status": "complete: 3 of 3 required genuine failures"
+}

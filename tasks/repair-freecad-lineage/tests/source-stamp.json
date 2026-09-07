@@ -1,0 +1,25 @@
+{
+  "schema": "repair-freecad-lineage-tests-source-stamp-v1",
+  "packaged_sha256": {
+    "private/scenes/17a4c9e2b603.FCStd": "0a1981765603b5d617a914dc74f98449acd825c473785adcffc2cca54d490871",
+    "private/scenes/29d4a7c160e8.FCStd": "d3c1e7920a6bd63e57c3c27dae9322ce5cfb1daba72c2861e29652be1695d826",
+    "private/scenes/6c2d90a4f731.FCStd": "ef43abdf93e5a1745b5e101fa9440ae6355203474af898f6f157543dbdae334e",
+    "private/scenes/a5e7c120d468.FCStd": "162421b6e649f32dbce6960d0b14a02934c13aef3da5870f77526206b1558f81",
+    "private/scenes/d80f3a617c24.FCStd": "aceda1b0d8c5f8bdebd31b65e05bfecf3167baee5f133999a199e39afe6d2ffe",
+    "private/scenes/f3b810d6a247.FCStd": "501c2cf08be0390579f64008181ead54a1fe36ba06af830aa01d6c7540ce51b1",
+    "private/edits/48d0a7c31e95.json": "93fb1635c06a9880358a325d93185921bb2a0e8117b1fb21491715b07ea543d6",
+    "private/edits/5e9a20c7d413.json": "cff0fe73fdd8a3a3944c1d35c0fa0e894a65812daee0a02211939bf26ca0a601",
+    "private/edits/71e4b2c906af.json": "ae5f023b84c6c90a70b11dfcac20104a822858c56fc3a411b4ae497974777a48",
+    "private/edits/9b2e47c1a603.json": "93fb1635c06a9880358a325d93185921bb2a0e8117b1fb21491715b07ea543d6",
+    "private/edits/a84c1e630d72.json": "cff0fe73fdd8a3a3944c1d35c0fa0e894a65812daee0a02211939bf26ca0a601",
+    "private/edits/c03a7e18d4b6.json": "ae5f023b84c6c90a70b11dfcac20104a822858c56fc3a411b4ae497974777a48",
+    "private/empty.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "checker.py": "8c76ad82c98b2a4e10130aaec713b3905586c7d0c54aed1f96717a46abf9671a",
+    "isolation/leakscan.py": "c59e0a03a1d9be3e48a7bd67de1aeb0f5563a90952d81a00825fc80b2bd84e30",
+    "isolation/policy.json": "e9e3c0c4258bd812e6587d53ba799b2f51fd8331be5659cd753b443b306fa1a5",
+    "run_verifier.py": "0973cf2c2a28c322c41c0bcb6b5b01510f24c98258a39088b6ddb0b8ee4aacf3",
+    "write_failure.py": "083a515941b90cb33d9607874cab03b3f8ab08f66336ea2370842f758cf79d54",
+    "test.sh": "866b70e47acc017200e4523d34c0094d8b33c894f039054a0392add21000a566",
+    "Dockerfile": "63144a2d24349c301b6d3139ce4cc1a82c3fc1d8ec1c35b03e27ad7b7625041b"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "finding_count": 0,
+  "findings": [],
+  "scanned": [
+    ".dockerignore",
+    "Dockerfile",
+    "face_lineage.py",
+    "public/CONTRACT.md",
+    "public/check_public.py",
+    "public/edit_public.json",
+    "public/scene_public.FCStd"
+  ],
+  "schema": "freecad-lineage-leak-scan-result-v1",
+  "scope": "candidate-tree",
+  "status": "pass"
+}
