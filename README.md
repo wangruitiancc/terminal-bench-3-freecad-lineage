@@ -44,7 +44,7 @@ All three valid Codex submissions passed the geometry, temporal lineage, operati
 
 Two valid Claude submissions independently reached a public-chain pass. Hidden repair passed on the two identity scenes, hidden update failed because the atlas ceased to be a disjoint boundary partition, and the four transformed scenes failed `unknown_state_preserved`. The third valid submission failed all six repair scenes because its atlas was not a disjoint boundary partition and its consumers did not match the pristine oracle. All three are genuine task failures with no agent or verifier exception.
 
-Automated `harbor analyze` produced mixed task-specification judgments for the same documented preservation invariant: some trials passed, while others claimed `unknown_state_preserved` was not stated. The public contract explicitly requires preserving unknown native properties and limits extra-subdivision freedom to `LineageFaces.Shape`; the task remained frozen after evaluation so that results stayed comparable.
+The recorded two-criterion `harbor analyze` reports produced mixed task-specification judgments for the same documented preservation invariant: some trials passed, while others claimed `unknown_state_preserved` was not stated. The public contract explicitly requires preserving unknown native properties and limits extra-subdivision freedom to `LineageFaces.Shape`; the task remained frozen after evaluation so that results stayed comparable. Current CI has since been rechecked and its analysis invocation also evaluates `difficulty_crux`, `near_miss`, `refusals`, and `low_timeout`; that exact six-criterion rerun is not yet recorded.
 
 ## License
 

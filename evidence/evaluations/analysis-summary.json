@@ -99,5 +99,22 @@
     "task_specification_disagreement": "Three analyses alleged that unknown_state_preserved or immutable Placement was not explicit; three analyses judged the same public contract sufficient.",
     "contract_evidence": "CONTRACT.md says output must preserve unknown native properties unless listed mutable and limits extra-subdivision freedom to LineageFaces.Shape. instruction.md also requires preservation of all properties, graph links, business data, expressions, unrelated links, and non-mutable B-reps.",
     "decision": "Keep the frozen task unchanged after evaluation and disclose the analyzer disagreement."
+  },
+  "scope": {
+    "status": "partial_current_ci_coverage",
+    "recorded_checks": [
+      "task_specification",
+      "reward_hacking"
+    ],
+    "current_ci_checks": [
+      "task_specification",
+      "reward_hacking",
+      "difficulty_crux",
+      "near_miss",
+      "refusals",
+      "low_timeout"
+    ],
+    "current_ci_commit": "83c7a6172d629c6575b785ab12c8db787bb2e323",
+    "rerun_status": "not_completed; compatible relay returned HTTP 429/502 during recheck on 2026-09-07"
   }
 }

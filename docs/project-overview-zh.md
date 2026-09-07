@@ -109,7 +109,7 @@ HTTP 500/503、安装阶段 TLS EOF 和余额预授权失败的尝试全部作�
 
 当前 CI 规则要求的两次 `/cheat` 也已执行。Codex 与 Claude 均为 reward 0；Claude 无异常并未找到可信绕过，Codex 在开始检查公开验证器后触发 `AgentSafetyRefusalError`。因此 Codex 满足分数门槛，但不能据此声称完成了完整 exploit search。
 
-`harbor analyze` 对六个有效标准试答均判定没有 reward hacking。task specification 出现 3 pass、3 fail 的分歧；失败意见称 `unknown_state_preserved` 未公开，但公开合同已经要求保留 unknown native properties，并明确 extra-subdivision freedom 仅作用于 `LineageFaces.Shape`。同一失败签名也被另一轮分析判为 specification pass，所以这里保留原始分歧，不在评测后修改冻结任务。
+已记录的两项 `harbor analyze` 检查对六个有效标准试答均判定没有 reward hacking。task specification 出现 3 pass、3 fail 的分歧；失败意见称 `unknown_state_preserved` 未公开，但公开合同已经要求保留 unknown native properties，并明确 extra-subdivision freedom 仅作用于 `LineageFaces.Shape`。同一失败签名也被另一轮分析判为 specification pass，所以这里保留原始分歧，不在评测后修改冻结任务。当前 CI 还要求 `difficulty_crux`、`near_miss`、`refusals` 和 `low_timeout` 四项分析；兼容中转在补跑时返回 HTTP 429/502，因此这四项仍待补齐。
 
 ## 7. 对 RL / SFT 的使用方式
 
@@ -120,7 +120,7 @@ HTTP 500/503、安装阶段 TLS EOF 和余额预授权失败的尝试全部作�
 
 ## 8. 当前完成度
 
-已完成任务源码、公开合同、私有验证器、六场景夹具、独立镜像、泄漏扫描、正负门禁、35 项审查、Codex 与 Claude 各自有效连续 `0/3`、两次 `/cheat`、自动分析、机器可读证据和确定性提交包。
+已完成任务源码、公开合同、私有验证器、六场景夹具、独立镜像、泄漏扫描、正负门禁、35 项审查、Codex 与 Claude 各自有效连续 `0/3`、两次 `/cheat`、两项自动分析、机器可读证据和确定性提交包。当前六项分析 rubric 还有四项待补跑。
 
 招聘方如要求 Anthropic 官方端点证据，可在其授权环境对同一 task checksum 复跑，并把该结果作为新的独立证据记录。
 

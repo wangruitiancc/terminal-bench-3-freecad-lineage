@@ -53,9 +53,10 @@ Follow `.github/workflows/run-cheat-trials.yml` from the current TB3 main branch
 ## Analyze
 
 ```bash
-harbor analyze jobs/<standard-or-cheat-job> --failing \
-  -a claude-code -m claude-sonnet-5 -n 1 \
-  --ak reasoning_effort=high
+harbor analyze jobs/<standard-or-cheat-job> \
+  -m sonnet \
+  -r docs/prompts/trial-analysis.toml \
+  --job-prompt docs/prompts/trial-analysis-job.txt
 ```
 
-The assignment names current CI as the source of truth; check `.github/harbor-run-defaults.yml` before rerunning in case model, backend, attempts, or analysis settings change.
+Run this from a current Terminal-Bench checkout so both prompt files come from the same CI revision. The recorded analysis evidence in this repository predates this exact six-criterion invocation and covers `task_specification` and `reward_hacking`; rerunning the current command remains open. The assignment names current CI as the source of truth, so check `.github/harbor-run-defaults.yml` before every rerun in case model, backend, attempts, or analysis settings change.

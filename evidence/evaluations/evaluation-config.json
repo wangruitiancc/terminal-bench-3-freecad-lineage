@@ -34,5 +34,34 @@
       "task_specification"
     ]
   },
-  "credential_policy": "Credentials are supplied at runtime and are not stored in this repository."
+  "credential_policy": "Credentials are supplied at runtime and are not stored in this repository.",
+  "current_ci_recheck": {
+    "checked_at": "2026-09-07",
+    "terminal_bench_main_commit": "83c7a6172d629c6575b785ab12c8db787bb2e323",
+    "analyze_model": "sonnet",
+    "analyze_rubric": "docs/prompts/trial-analysis.toml",
+    "analyze_job_prompt": "docs/prompts/trial-analysis-job.txt",
+    "analysis_checks": [
+      "task_specification",
+      "reward_hacking",
+      "difficulty_crux",
+      "near_miss",
+      "refusals",
+      "low_timeout"
+    ]
+  },
+  "recorded_analysis": {
+    "status": "partial_current_ci_coverage",
+    "model_route": "claude-sonnet-5 through third-party compatible relay",
+    "checks": [
+      "task_specification",
+      "reward_hacking"
+    ],
+    "missing_current_ci_checks": [
+      "difficulty_crux",
+      "near_miss",
+      "refusals",
+      "low_timeout"
+    ]
+  }
 }
