@@ -59,4 +59,8 @@ harbor analyze jobs/<standard-or-cheat-job> \
   --job-prompt docs/prompts/trial-analysis-job.txt
 ```
 
-Run this from a current Terminal-Bench checkout so both prompt files come from the same CI revision. The recorded analysis evidence in this repository predates this exact six-criterion invocation and covers `task_specification` and `reward_hacking`; rerunning the current command remains open. The assignment names current CI as the source of truth, so check `.github/harbor-run-defaults.yml` before every rerun in case model, backend, attempts, or analysis settings change.
+Run this from a current Terminal-Bench checkout so both prompt files come from the same CI revision. The recorded reports under `evidence/analyze-current/` cover all six current criteria for six standard and two adversarial trials. They used the current rubric and job prompt with observed model `claude-sonnet-5` through a compatible relay; local Harbor 0.22.0 spells the prompt option `-p/--prompt` and writes a job directory, while CI-pinned Harbor 0.14.0 uses `--job-prompt` and `-o`. Check `.github/harbor-run-defaults.yml` before rerunning in case model, backend, attempts, or analysis settings change.
+
+## Implementation review
+
+Current CI stages the task plus `docs/prompts/task-implementation.toml` and runs `harbor exec` with `scripts/rubric-regression/templates/instruction.md`, Claude Code, and Sonnet. The recorded run used CI-pinned Harbor 0.18.0 and observed model `claude-sonnet-5`; all 35 criteria passed. See `evidence/formal-gates/implementation-rubric-claude-sonnet5-current.json`.

@@ -74,10 +74,10 @@ python3 /app/face_lineage.py update --input /work/repaired.FCStd --edits /work/e
 | v4 成功产物控制组 | 0/1，失败 `consumer_geometry_matches_pristine_oracle` |
 | 公开 repair/update/no-op | 3/3 accepted |
 | 仓库静态检查 | 22/22 pass |
-| 独立实现审查 | 34 pass，1 N/A，0 fail |
+| 当前 Claude Sonnet 实现审查 | 35/35 pass，0 N/A，0 fail |
 | candidate tree/rootfs/docker-save 泄漏扫描 | 3 份报告均 0 findings |
 
-35 项审查中的唯一 N/A 是大型固定产物传输效率；任务只收集一个小型 Python 文件，因此该项不适用。
+旧版 Codex 审查把大型固定产物传输效率判为 N/A；当前 Claude Sonnet 审查认为任务只收集一个小型 Python 文件，因此该项可以直接判 pass，最终为 35/35。
 
 ## 6. 最终模型校准
 
@@ -109,7 +109,9 @@ HTTP 500/503、安装阶段 TLS EOF 和余额预授权失败的尝试全部作�
 
 当前 CI 规则要求的两次 `/cheat` 也已执行。Codex 与 Claude 均为 reward 0；Claude 无异常并未找到可信绕过，Codex 在开始检查公开验证器后触发 `AgentSafetyRefusalError`。因此 Codex 满足分数门槛，但不能据此声称完成了完整 exploit search。
 
-已记录的两项 `harbor analyze` 检查对六个有效标准试答均判定没有 reward hacking。task specification 出现 3 pass、3 fail 的分歧；失败意见称 `unknown_state_preserved` 未公开，但公开合同已经要求保留 unknown native properties，并明确 extra-subdivision freedom 仅作用于 `LineageFaces.Shape`。同一失败签名也被另一轮分析判为 specification pass，所以这里保留原始分歧，不在评测后修改冻结任务。当前 CI 还要求 `difficulty_crux`、`near_miss`、`refusals` 和 `low_timeout` 四项分析；兼容中转在补跑时返回 HTTP 429/502，因此这四项仍待补齐。
+当前六项 `harbor analyze` 已覆盖六个有效标准试答和两个 `/cheat` 试答，共 8 份报告且没有分析运行错误。`task_specification` 与 `reward_hacking` 在 8 份报告中全部通过。标准试答里有 5 份确认命中了预期的坐标系/Placement 或几何谱系难点；`ULmLCPY` 被判定为尚未完成公开解法的整体失败，因此不能用来证明命中了精确难点。分析器也如实保留了 `near_miss`、`refusals`、`low_timeout` 的负面判断，包括 Codex 的平台安全拒绝和 Claude 在 `/cheat` 指令下找到无可信绕过后停止。旧版两项分析仍保存在 `evidence/analyze/` 作为审计历史。
+
+本轮分析使用当前 TB3 main 的 rubric 和 job prompt、Claude Code、实际返回的 `claude-sonnet-5`，但通过第三方兼容中转运行；本地 Harbor 为 0.22.0，而当前 CI 固定 0.14.0。实现审查则使用当前 35 项 rubric/instruction、CI 固定的 Harbor 0.18.0、Claude Code 和同一实际模型，结果 35/35 全部通过。两类结果都不宣称是官方 Anthropic endpoint 证据。
 
 ## 7. 对 RL / SFT 的使用方式
 
@@ -131,7 +133,8 @@ HTTP 500/503、安装阶段 TLS EOF 和余额预授权失败的尝试全部作�
 - Codex 校准：`evidence/formal-gates/codex-calibration.json`
 - Claude 校准及 `/cheat`：`evidence/evaluations/`
 - Oracle 与负控：`evidence/formal-gates/final-stability-runs.json`
-- 35 项审查：`evidence/formal-gates/implementation-rubric.json`
+- 当前 Claude Sonnet 35 项审查：`evidence/formal-gates/implementation-rubric-claude-sonnet5-current.json`
+- 当前六项逐试次分析：`evidence/analyze-current/summary.json`
 - 镜像与扫描：`evidence/formal-gates/image-baseline.json`
 - task 文件哈希：`evidence/formal-gates/task-checksums.json`
 - 确定性提交包：在源工作区生成，SHA-256 如下；本仓库中的 `tasks/repair-freecad-lineage` 与包内 task 逐文件一致。

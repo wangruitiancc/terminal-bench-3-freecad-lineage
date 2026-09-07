@@ -24,7 +24,7 @@ The six private scenes execute repair, partial update, and empty update sequenti
 | Gate | Result |
 |---|---:|
 | Repository static checks | 22/22 pass |
-| Implementation rubric | 34 pass, 1 N/A, 0 fail |
+| Implementation rubric | 35/35 pass with current Claude Code Sonnet reviewer |
 | Public repair/update/no-op chain | 3/3 accepted |
 | Oracle | 10/10 reward 1, no exceptions |
 | NOP | 3/3 reward 0, no exceptions |
@@ -44,7 +44,9 @@ All three valid Codex submissions passed the geometry, temporal lineage, operati
 
 Two valid Claude submissions independently reached a public-chain pass. Hidden repair passed on the two identity scenes, hidden update failed because the atlas ceased to be a disjoint boundary partition, and the four transformed scenes failed `unknown_state_preserved`. The third valid submission failed all six repair scenes because its atlas was not a disjoint boundary partition and its consumers did not match the pristine oracle. All three are genuine task failures with no agent or verifier exception.
 
-The recorded two-criterion `harbor analyze` reports produced mixed task-specification judgments for the same documented preservation invariant: some trials passed, while others claimed `unknown_state_preserved` was not stated. The public contract explicitly requires preserving unknown native properties and limits extra-subdivision freedom to `LineageFaces.Shape`; the task remained frozen after evaluation so that results stayed comparable. Current CI has since been rechecked and its analysis invocation also evaluates `difficulty_crux`, `near_miss`, `refusals`, and `low_timeout`; that exact six-criterion rerun is not yet recorded.
+The current six-criterion `harbor analyze` rubric was run on all six valid standard trials and both adversarial trials. `task_specification` and `reward_hacking` passed in all eight analyses. Five standard trials were judged to hit the intended difficulty crux; `ULmLCPY` was judged an unfinished broad failure instead. The reports also preserve negative `near_miss`, `refusals`, and `low_timeout` findings where applicable, including the Codex safety refusal and Claude's adversarial stop behavior. See `evidence/analyze-current/summary.json` and the eight per-trial reports.
+
+The analysis used the current TB3 rubric and job prompt with observed model `claude-sonnet-5` through a compatible relay. Local Harbor was 0.22.0 rather than CI-pinned 0.14.0. The implementation review used CI-pinned Harbor 0.18.0, current rubric/instruction, Claude Code, and the same observed Sonnet 5 model; it passed all 35 criteria. Neither relay-backed result is presented as an official Anthropic endpoint run.
 
 ## License
 

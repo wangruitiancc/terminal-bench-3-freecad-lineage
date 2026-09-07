@@ -1,0 +1,156 @@
+{
+  "checks": {
+    "verifiable": {
+      "outcome": "pass",
+      "explanation": "The verifier (tests/run_verifier.py) is fully programmatic and deterministic: it runs 6 fixed hidden scenes x 3 phases (repair/update/noop) through real FreeCAD execution and geometric comparison, with no LLM-as-judge, no subjective grading, and no runtime network installs (all deps baked into tests/Dockerfile via micromamba)."
+    },
+    "solvable": {
+      "outcome": "pass",
+      "explanation": "solution/face_lineage.py (546 lines) is a genuine, executable implementation that performs real boundary-partition propagation and frame transforms via FreeCAD's Part API; it plausibly passes the verifier and is scoped (box-only planar geometry) to be implementable by an expert FreeCAD/OCC engineer within the stated 8-hour estimate."
+    },
+    "difficult": {
+      "outcome": "pass",
+      "explanation": "The task requires reconstructing persistent surface lineage across sequential Boolean operations with two independent coordinate frames (LocalFrame vs per-operation SurfaceFrame) and repairing native PropertyLinkSubList consumers — this is a genuine CAD/OCC domain-expertise problem, well beyond a standard undergraduate exercise, and not solvable via rote algorithms."
+    },
+    "interesting": {
+      "outcome": "pass",
+      "explanation": "Persistent-naming/surface-lineage repair after parametric Boolean edits is a real, recognized problem in CAD/CAE tooling (FreeCAD's own community discusses persistent naming extensively); CAD/CAE integration engineers and parametric-automation developers would plausibly be paid to build exactly this kind of repair logic."
+    },
+    "outcome_verified": {
+      "outcome": "pass",
+      "explanation": "The verifier grades only the final output FCStd files (geometry, links, preserved properties) via independent recomputation from a pristine copy; the instruction states the desired end state (repair + update semantics) without prescribing implementation steps or specific tools/approach."
+    },
+    "anti_cheat_robustness": {
+      "outcome": "pass",
+      "explanation": "Ground-truth scenes/edits/checker live only in the verifier image (tests/private/), inaccessible to the agent; the public check_public.py is a deliberately weaker subset (single scene, no multi-role graph verification) per README's stated intentional design, so passing it does not guarantee passing the private checker, preventing trivial gaming."
+    },
+    "task_security": {
+      "outcome": "pass",
+      "explanation": "No credential access, no network exfiltration, and no destructive operations were found; leakscan.py's credential-like regexes are leak detectors (defensive), not secret readers, and the only socket-related code verifies the candidate cannot reach docker.sock, which is a security-hardening check, not an attack."
+    },
+    "functional_verification": {
+      "outcome": "pass",
+      "explanation": "tests/checker.py opens both pristine and candidate FCStd files with real FreeCAD (App.openDocument) and performs actual geometric operations (Boolean cut/common, Area/Volume comparisons, face signature checks) rather than string/keyword matching on the agent's source code."
+    },
+    "deterministic_reproducible": {
+      "outcome": "pass",
+      "explanation": "All dependencies are pinned via conda-forge exact versions (python=3.11.8, freecad=0.21.2, git=2.44.0) and a pinned base image digest; no live services are used; geometry tolerances (1e-7) are used only for floating-point round-trip noise, and the task uses deterministic synthetic box geometry."
+    },
+    "essential_difficulty": {
+      "outcome": "pass",
+      "explanation": "Difficulty stems from genuine geometric/algorithmic reasoning — boundary-partition propagation through sequential Booleans and two-frame coordinate composition — not from arbitrary output formatting; the FCStd envelope/schema requirements exist to prevent trivial format cheats, not to add clerical busywork to the core task."
+    },
+    "test_instruction_alignment": {
+      "outcome": "pass",
+      "explanation": "Every instruction requirement (LinkSubList repair for Pressure/Coating/Contact, object-identity preservation, empty-update no-op, output file constraints, timeout, no leftover processes) maps to a concrete check in checker.py or run_verifier.py, and no undisclosed requirements were found beyond what instruction.md and CONTRACT.md describe."
+    },
+    "novel": {
+      "outcome": "pass",
+      "explanation": "The specific synthetic object schema (OperationGraph/Operations/Consumers with TEMP_CUT/RESTORE_FILL/PRIMARY_CUT/REPEAT_CUT roles and dual LocalFrame/SurfaceFrame semantics) is fabricated for this benchmark and not a textbook problem or literal pattern likely memorized from training data."
+    },
+    "agentic": {
+      "outcome": "pass",
+      "explanation": "Solving this requires iterative exploration of the broken script, FreeCAD API experimentation, running the public checker repeatedly, and debugging geometry mismatches — this cannot be solved by a single zero-shot generation."
+    },
+    "reviewable": {
+      "outcome": "pass",
+      "explanation": "CONTRACT.md and README.md give reviewers substantial context, and the checker derives all expected values from an independent pristine copy plus recomputed geometry rather than hardcoded expected answers, letting a reviewer trace the verification logic even without deep FreeCAD expertise."
+    },
+    "instruction_concision": {
+      "outcome": "pass",
+      "explanation": "instruction.md is concise (18 lines), uses absolute paths throughout, describes only the end-state requirements, and does not prescribe an implementation approach; it appropriately references the CONTRACT.md for detailed schema rather than inlining it."
+    },
+    "solution_quality": {
+      "outcome": "pass",
+      "explanation": "solution/face_lineage.py performs real computation (iterative Boolean cuts, frame transforms, atlas construction) rather than echoing precomputed answers, and is kept as a proper file in solution/ rather than an inline heredoc in solve.sh."
+    },
+    "separate_verifier_configured": {
+      "outcome": "pass",
+      "explanation": "All verifier inputs (private scenes/edits, checker.py, leakscan.py) are baked into tests/Dockerfile's build context; all verifier tooling (FreeCAD, Python, git) is pre-installed at image build time via micromamba with no runtime pip/apt installs in test.sh, and the shared face_lineage.py/edit_public.json fixtures byte-match per source-stamp.json hashes."
+    },
+    "environment_hygiene": {
+      "outcome": "pass",
+      "explanation": "environment/Dockerfile only copies face_lineage.py and public/ (no tests/solution leakage), installs no test-only dependencies, and both Dockerfiles properly run apt-get update before install and rm -rf /var/lib/apt/lists/* after, with unpinned apt packages as expected."
+    },
+    "structured_data_schema": {
+      "outcome": "pass",
+      "explanation": "The edit JSON schema (exactly {\"REPEAT_CUT\": {\"X0\",\"XLength\",\"Y0\",\"YLength\"}} or {}) is explicitly and normatively documented in CONTRACT.md and enforced verbatim by parse_edit logic, not left as an example alone."
+    },
+    "typos": {
+      "outcome": "pass",
+      "explanation": "No typos were found in filenames, paths, commands, or variable names across instruction.md, task.toml, Dockerfiles, and the reviewed Python files."
+    },
+    "difficulty_explanation_quality": {
+      "outcome": "pass",
+      "explanation": "difficulty_explanation is filled in (not the empty-string default), describes the specific reasoning challenges (boundary propagation, dual-frame composition, dead-face tracking) for both agents and humans, notes the fixtures are synthetic-but-realistic reductions, and names the real-world practitioners (CAD/CAE integration engineers) without citing pass rates or benchmark scores."
+    },
+    "solution_explanation_quality": {
+      "outcome": "pass",
+      "explanation": "solution_explanation clearly summarizes the high-level strategy (map to LocalFrame, propagate patches via 2D boundary intersection, name supports via SurfaceFrame, transform to world once) and is consistent with what solution/face_lineage.py actually implements."
+    },
+    "verification_explanation_quality": {
+      "outcome": "pass",
+      "explanation": "verification_explanation describes the verification approach concretely (unprivileged execution, six pristine scenes, independent replay via SurfaceFrame, bidirectional B-rep comparison) and explicitly justifies the 1e-7 tolerance calibration against save-reopen round trips and two independently structured correct implementations, satisfying the tolerance-justification requirement."
+    },
+    "category_and_tags": {
+      "outcome": "pass",
+      "explanation": "category = \"Hardware\" with subcategory = \"CAD\" is a reasonable fit for a CAD/FreeCAD geometry task among the seven allowed domains, and tags (cad, freecad, topology, surface-lineage, parametric-repair, metamorphic-testing) are specific and relevant rather than generic."
+    },
+    "task_name": {
+      "outcome": "pass",
+      "explanation": "\"repair-freecad-lineage\" is a concise, three-word, lowercase kebab-case slug that clearly communicates the task's core action (repair) and domain (FreeCAD lineage) without needing to open any files."
+    },
+    "resource_configuration": {
+      "outcome": "pass",
+      "explanation": "Resource settings (2 cpus, 4096 MB memory, agent timeout 28800s, verifier timeout 1800s) are non-default and appropriately scaled for an 8-hour-expert-estimate FreeCAD task that must run six sequential chains through real geometry kernels, with difficulty coming from reasoning rather than added compute."
+    },
+    "task_readme": {
+      "outcome": "pass",
+      "explanation": "README.md provides genuinely new maintainer context not found elsewhere (rationale for the reduced geometry family, explanation of why checker.py and solution must stay independent implementations, and a log of four prior regressions that motivate specific guards), rather than duplicating instruction/solution/metadata content."
+    },
+    "expert_time_estimate": {
+      "outcome": "pass",
+      "explanation": "expert_time_estimate_hours = 8.0 is non-zero and plausible given the difficulty_explanation's description of a multi-faceted geometric repair task requiring propagation, frame composition, and native link repair."
+    },
+    "task_toml_schema": {
+      "outcome": "pass",
+      "explanation": "task.toml uses only recognized fields across [task], [metadata], [verifier], [verifier.env], [agent], [environment], [environment.env], [solution.env], plus root-level artifacts — no invented fields were found."
+    },
+    "no_extraneous_files": {
+      "outcome": "pass",
+      "explanation": "Every file present is referenced by a Dockerfile COPY, the instruction, solve.sh, or is consumed by checker.py/run_verifier.py (e.g., all six private scenes/edits are enumerated in the CASES tuple); no leftover, cruft, or unused files were found."
+    },
+    "artifact_efficiency": {
+      "outcome": "pass",
+      "explanation": "The only artifact declared is /app/face_lineage.py — a small agent-produced deliverable file, not a large build-time-fixed tree or dependency directory; there is no [[verifier.collect]] hook in this task, so the artifact-is-the-answer exception applies cleanly."
+    },
+    "verifier_execution_isolation": {
+      "outcome": "pass",
+      "explanation": "run_verifier.py executes the agent's face_lineage.py exclusively via setpriv under an unprivileged uid 2001 (never as root), sets /logs/verifier to root:root 0700 before any candidate code runs (test.sh lines 5-8), derives the reward solely from the root-run orchestrator's own pass/fail count, and kills the candidate's process group after each invocation."
+    },
+    "ctrf_reporting": {
+      "outcome": "pass",
+      "explanation": "run_verifier.py writes a full CTRF report to /logs/verifier/ctrf.json with per-phase test entries (e.g. chain-01/repair, chain-01/update, chain-01/noop) plus setup/isolation checks, giving genuine per-test granularity rather than a bare reward number."
+    },
+    "do_not_modify_enforced": {
+      "outcome": "pass",
+      "explanation": "The instruction's preservation constraints (object names/IDs/types/schemas, no add/delete/rename) are enforced by checker.py's compare_pristine_state, which independently reopens a candidate-inaccessible pristine copy via real FreeCAD and diffs object lists and properties directly, rather than trusting agent-reported state or recomputing solely from the agent's own output."
+    },
+    "binary_reward": {
+      "outcome": "pass",
+      "explanation": "Every reward write site (run_verifier.py's write_results and write_failure.py's crash path) writes exactly 1.0 or 0.0 based on failed == 0, with no ratios, weighted composites, or unthresholded continuous scores ever written to reward.txt or reward.json."
+    }
+  },
+  "_meta": {
+    "reviewed_at": "2026-09-07",
+    "terminal_bench_main_commit": "83c7a6172d629c6575b785ab12c8db787bb2e323",
+    "harbor_version": "0.18.0",
+    "agent": "claude-code",
+    "requested_model": "claude-sonnet-5",
+    "observed_model": "claude-sonnet-5",
+    "route": "third-party Anthropic-compatible relay",
+    "rubric_sha256": "9e6aa64bc57fb7bb66e5caefe942da2959e4def91831e8e292b96efec26adb58",
+    "criteria_count": 35,
+    "result": "35 pass, 0 not_applicable, 0 fail"
+  }
+}

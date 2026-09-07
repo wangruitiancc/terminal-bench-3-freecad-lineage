@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "trial_name": "repair-freecad-lineage__FoGTya5",
+    "analysis_agent": "claude-code",
+    "requested_model": "claude-sonnet-5",
+    "observed_model": "claude-sonnet-5",
+    "route": "third-party Anthropic-compatible relay",
+    "terminal_bench_main_commit": "83c7a6172d629c6575b785ab12c8db787bb2e323",
+    "harbor_version": "0.22.0",
+    "rubric": "docs/prompts/trial-analysis.toml",
+    "prompt": "docs/prompts/trial-analysis-job.txt"
+  },
+  "summary": "This job consists of a single trial (repair-freecad-lineage__FoGTya5) using codex/gpt-5.6-sol at xhigh reasoning effort, which finished in the environment with reward 0.0 (fail). The agent correctly solved 2 of 6 hidden verifier chains end-to-end (chain-01, chain-02, each passing repair/update/noop), while chains 03-06 failed uniformly at the repair phase on a single 'unknown_state_preserved' check, cascading to automatic failures of their dependent update/noop phases. The root cause is identical across all 4 failing chains: the submitted face_lineage.py builds the LineageFaces compound by copying already-world-transformed faces (via face.copy() after to_world() was applied per-surface), which bakes the transform into raw geometry and leaves LineageFaces.Placement at identity, whereas the pristine/oracle expects the object's native non-identity Placement (equal to OperationGraph.LocalFrame) to be preserved. Chains 01-02 pass only because their fixtures happen to use an identity LocalFrame, masking the bug. This matches exactly the distinguishing difficulty called out in the task's own difficulty_explanation (graph geometry frame vs. independently permuted per-operation surface frames), indicating the failure reflects genuine, intended task difficulty rather than a verifier calibration issue or unrelated bug.",
+  "checks": {
+    "task_specification": {
+      "explanation": "CONTRACT.md and instruction.md clearly specify commands, schemas, and required preservation semantics. The verifier's granular per-check breakdown (atlas checks, consumer checks, state_comparison groups) shows the spec is precise and consistently enforced across all 6 chains; no ambiguity or contradictory requirement was observed in this trial.",
+      "outcome": "pass"
+    },
+    "reward_hacking": {
+      "explanation": "native_contract checks (feature_python_objects, proxy_objects, python_object_properties, answer_derived_properties) are all empty/true across every chain, and artifact_and_private_inputs_remain_byte_identical passed. The agent made a legitimate attempt at the algorithm rather than trying to fake outputs, embed proxies, or leak/ledger answers.",
+      "outcome": "pass"
+    },
+    "difficulty_crux": {
+      "explanation": "The failure exactly reproduces the task's documented difficulty crux: distinguishing the OperationGraph.LocalFrame (graph geometry frame) from per-operation SurfaceFrame, and preserving the LineageFaces object's native Placement instead of baking the world transform into raw face geometry (see task/solution/face_lineage.py:401 comment, which explicitly warns about this exact trap). This confirms the intended difficulty axis is genuinely load-bearing and was what tripped up the agent.",
+      "outcome": "pass"
+    },
+    "near_miss": {
+      "explanation": "Although chains 03-06 fail on only one check each (unknown_state_preserved, specifically LineageFaces.Placement), this is not a quantitative near-miss against a tolerance threshold — the mismatch is categorical (identity Placement [0,0,0]/[0,0,0,1] vs. the pristine's genuinely rotated/translated Placement). All geometry, atlas, and consumer-link checks pass exactly, showing the agent solved the hard geometric parts correctly but missed a specific, well-defined semantic requirement (preserve native Placement representation) rather than being defeated by verifier strictness. This is a clean conceptual gap, not a calibration issue.",
+      "outcome": "pass"
+    },
+    "refusals": {
+      "explanation": "No refusal occurred. The task has no sensitive/ethical content, and the agent (per trial.log and trajectory) engaged with and submitted a complete implementation attempt for the full 28800s budget window (finishing in ~14 minutes of actual work).",
+      "outcome": "pass"
+    },
+    "low_timeout": {
+      "explanation": "Agent execution ran from 22:51:54 to 23:04:15 (~12.4 minutes), far under the 28800s (8 hour) agent timeout. The verifier itself completed in ~26.6 seconds against an 1800s budget, and all 90-second per-command limits were met (candidate_timed_out: false in every chain). No timeout-related failures are present.",
+      "outcome": "pass"
+    }
+  },
+  "cost_usd": 0.6171647999999998,
+  "error": null
+}

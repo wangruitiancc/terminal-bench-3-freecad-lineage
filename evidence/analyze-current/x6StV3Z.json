@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "trial_name": "repair-freecad-lineage__x6StV3Z",
+    "analysis_agent": "claude-code",
+    "requested_model": "claude-sonnet-5",
+    "observed_model": "claude-sonnet-5",
+    "route": "third-party Anthropic-compatible relay",
+    "terminal_bench_main_commit": "83c7a6172d629c6575b785ab12c8db787bb2e323",
+    "harbor_version": "0.22.0",
+    "rubric": "docs/prompts/trial-analysis.toml",
+    "prompt": "docs/prompts/trial-analysis-job.txt"
+  },
+  "summary": "This job contains a single trial (repair-freecad-lineage__x6StV3Z, claude-opus-5 via claude-code, reasoning_effort=max) which scored reward 0.0. The agent spent ~12 minutes iterating against the public checker until it passed all public repair/update/noop checks, but the hidden verifier suite (6 private chains x repair/update/noop = 23 checks) only passed 7/23. Repair failed outright on 4 of 6 private chains (chain-03 through chain-06) due to unrelated 'unknown' property state not being preserved, which cascaded into automatic failures of their update/noop phases. On the two chains where repair succeeded (chain-01, chain-02), the subsequent update phase failed because the rebuilt lineage atlas was not a valid disjoint boundary partition. No reward hacking, refusals, or timeout issues were observed; the agent used the full 90s-per-command budget efficiently and had 8 hours available but needed only a fraction of it.",
+  "checks": {
+    "task_specification": {
+      "explanation": "The instruction and referenced CONTRACT.md are detailed and unambiguous. The agent understood the repair/update/noop requirements, correctly used the provided public checker (/app/public/check_public.py) to iterate, and never expressed confusion about scope or requirements. No evidence the task wording caused avoidable failure.",
+      "outcome": "pass"
+    },
+    "reward_hacking": {
+      "explanation": "Reviewed the submitted /app/face_lineage.py artifact and trajectory: no hardcoded golden answers, no special-casing of the public scene's hashes/dimensions, no cached answer ledgers, proxies, or self-reported grading data. The agent implemented a general coordinate-frame-based lineage propagation algorithm and validated it only through the sanctioned public checker, consistent with the instruction's explicit prohibition on cached answers/expected areas.",
+      "outcome": "pass"
+    },
+    "difficulty_crux": {
+      "explanation": "The task's own difficulty_explanation (rigid LocalFrame vs. independently permuted per-operation SurfaceFrame composition, temporal provenance of dead/buried faces, boundary partition subtraction) matches exactly where the agent struggled: it got the public single-chain case fully working but failed to generalize to 4 of 6 private role/dimension permutations (unknown_state_preserved) and to correctly rebuild a disjoint atlas after REPEAT_CUT on 2 more (atlas_is_disjoint_boundary_partition). This indicates the coordinate-frame/lineage-propagation generalization is the genuine crux, not an artifact of unclear setup.",
+      "outcome": "pass"
+    },
+    "near_miss": {
+      "explanation": "Failures are not a case of narrowly missing a numeric/tolerance bar. 4/6 chains (chain-03..06) fail a binary state-preservation check at the repair step itself — a structural/clean failure, not a close geometric miss. The remaining 2/6 chains (chain-01, chain-02) fail update on 'atlas_is_disjoint_boundary_partition', a structural correctness check on the face partition rather than a tolerance threshold. No signs the agent was defeated by an overly strict quantitative cutoff; this looks like genuine algorithmic incompleteness rather than verifier miscalibration.",
+      "outcome": "pass"
+    },
+    "refusals": {
+      "explanation": "No refusal language or safety-related pushback found anywhere in the trajectory or logs. The task is a purely technical CAD/geometry repair task with no sensitive-topic framing, and the agent engaged fully with the work end to end.",
+      "outcome": "pass"
+    },
+    "low_timeout": {
+      "explanation": "Agent had a 28800s (8 hour) budget but completed all work in ~712s (~12 minutes) of execution time. Per-command 90s limits and the verifier's 1800s timeout were both respected with no candidate_timed_out or checker_timed_out flags in any of the 23 verifier test entries. No indication that insufficient time budget contributed to the failure.",
+      "outcome": "pass"
+    }
+  },
+  "cost_usd": 0.6257566,
+  "error": null
+}

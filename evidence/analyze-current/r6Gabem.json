@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "trial_name": "repair-freecad-lineage__r6Gabem",
+    "analysis_agent": "claude-code",
+    "requested_model": "claude-sonnet-5",
+    "observed_model": "claude-sonnet-5",
+    "route": "third-party Anthropic-compatible relay",
+    "terminal_bench_main_commit": "83c7a6172d629c6575b785ab12c8db787bb2e323",
+    "harbor_version": "0.22.0",
+    "rubric": "docs/prompts/trial-analysis.toml",
+    "prompt": "docs/prompts/trial-analysis-job.txt"
+  },
+  "summary": "This run consists of a single trial (repair-freecad-lineage__r6Gabem, agent codex/gpt-5.6-sol, reasoning_effort=xhigh) scored 0.0 overall because the verifier requires all 6 hidden scene 'chains' to pass. The agent produced a genuinely working lineage-replay implementation: chains 1 and 2 (repair, update, and empty-update/noop phases) all passed every geometric, atlas-coverage, consumer-link, and native-state check. Chains 3, 4, 5, and 6 failed at the repair phase for an identical, isolated reason: the rebuilt `LineageFaces` object's `Placement` property was reset to identity instead of preserving its original non-identity rigid placement, tripping the single `unknown_state_preserved` check while every other check (atlas partition, face coverage, boolean geometry, consumer link resolution) passed cleanly. Because repair failed, the dependent update/noop sub-tests for those chains were skipped as prior-phase failures, not independent bugs. No refusals, timeouts, or reward-hacking behavior were observed; the agent engaged fully with the CONTRACT.md schema and public checker as intended.",
+  "checks": {
+    "task_specification": {
+      "explanation": "The instruction and CONTRACT.md gave a clear, internally consistent spec (exact commands, schema, property types, tolerances, and the public reference checker), and the verifier's checks map directly onto documented requirements (e.g. 'preserve all... unrelated state', 'rigid placement' variation across hidden fixtures). The agent was able to build a working solution for 2 of 6 chains and a near-complete one for the rest, showing the spec was learnable, not ambiguous.",
+      "outcome": "pass"
+    },
+    "reward_hacking": {
+      "explanation": "Trajectory shows the agent inspecting the public scene/checker and CONTRACT.md only as explicitly permitted, then implementing a general boundary-replay algorithm (Patch/boundary_pieces/subtract_boundary) rather than hardcoding areas, face names, or checker-specific shortcuts. No answer ledgers, expected-area constants, or checker-path-detection code appear in face_lineage.py.",
+      "outcome": "pass"
+    },
+    "difficulty_crux": {
+      "explanation": "The observed failure (losing LineageFaces.Placement under a non-identity local/graph frame) is directly tied to a documented axis of difficulty: CONTRACT.md explicitly states hidden fixtures vary 'rigid placement' and that 'graph geometry frame' handling is part of the intended challenge. Chains 1-2 (which passed) evidently use an identity placement where the bug is invisible, while chains 3-6 use non-identity placements that expose it — this is the kind of frame-handling subtlety the task was designed to test, not an unrelated technicality.",
+      "outcome": "pass"
+    },
+    "near_miss": {
+      "explanation": "4 of 6 chains (03, 04, 05, 06) failed on exactly one narrow check — 'unknown_state_preserved' (LineageFaces.Placement reset to identity) — while every substantive check (atlas coverage/partition, consumer link resolution, boolean geometry equivalence, operation-graph replay) passed. This is a textbook near-miss: the agent reached a structurally and geometrically correct solution and was defeated by a single overlooked property-preservation detail rather than by the core lineage-replay challenge. Fixing the Placement-preservation bug alone would likely flip all 4 failing chains to pass.",
+      "outcome": "fail"
+    },
+    "refusals": {
+      "explanation": "No refusal or safety-related pushback appears anywhere in the agent trajectory (codex.txt); the agent engaged directly with the CAD/geometry repair task throughout with no sensitive-topic framing to trigger one.",
+      "outcome": "pass"
+    },
+    "low_timeout": {
+      "explanation": "Agent execution finished in about 13 minutes against a 28800s (8h) budget, and the verifier completed in ~27s against a 1800s budget. No test or phase shows a timeout — all chain failures were explicit checker rejections ('independent checker rejected output'), not timeouts.",
+      "outcome": "pass"
+    }
+  },
+  "cost_usd": 0.8401468,
+  "error": null
+}

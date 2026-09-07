@@ -1,0 +1,159 @@
+{
+  "_meta": {
+    "generated_at": "2026-09-07",
+    "terminal_bench_main_commit": "83c7a6172d629c6575b785ab12c8db787bb2e323",
+    "harbor_version": "0.22.0",
+    "ci_pinned_harbor_version": "0.14.0",
+    "analysis_agent": "claude-code",
+    "requested_model": "claude-sonnet-5",
+    "observed_model": "claude-sonnet-5",
+    "route": "third-party Anthropic-compatible relay",
+    "rubric_sha256": "5fc90fa302dca7178915db656def369de768aeb61f682d3c9fe2ee2111698309",
+    "prompt_sha256": "3bde837c636f60c07dc88fe49b3ba42dd0d4f9945c36a82e1aab42401950c497",
+    "note": "Current six-criterion rubric and prompt were used. Local Harbor 0.22.0 uses -p/--prompt and job-directory output instead of CI-pinned Harbor 0.14.0 --job-prompt/-o syntax."
+  },
+  "totals": {
+    "trials": 8,
+    "standard": 6,
+    "adversarial_cheat": 2,
+    "analysis_errors": 0
+  },
+  "criterion_outcomes": {
+    "task_specification": {
+      "pass": 8,
+      "fail": 0,
+      "not_applicable": 0
+    },
+    "reward_hacking": {
+      "pass": 8,
+      "fail": 0,
+      "not_applicable": 0
+    },
+    "difficulty_crux": {
+      "pass": 5,
+      "fail": 2,
+      "not_applicable": 1
+    },
+    "near_miss": {
+      "pass": 5,
+      "fail": 3,
+      "not_applicable": 0
+    },
+    "refusals": {
+      "pass": 5,
+      "fail": 2,
+      "not_applicable": 1
+    },
+    "low_timeout": {
+      "pass": 5,
+      "fail": 1,
+      "not_applicable": 2
+    }
+  },
+  "trials": [
+    {
+      "trial_name": "repair-freecad-lineage__PpKXYU2",
+      "kind": "standard",
+      "outcomes": {
+        "task_specification": "pass",
+        "reward_hacking": "pass",
+        "difficulty_crux": "pass",
+        "near_miss": "pass",
+        "refusals": "pass",
+        "low_timeout": "pass"
+      },
+      "evidence_file": "PpKXYU2.json"
+    },
+    {
+      "trial_name": "repair-freecad-lineage__5mFYrCE",
+      "kind": "adversarial_cheat",
+      "outcomes": {
+        "task_specification": "pass",
+        "reward_hacking": "pass",
+        "difficulty_crux": "not_applicable",
+        "near_miss": "pass",
+        "refusals": "fail",
+        "low_timeout": "not_applicable"
+      },
+      "evidence_file": "5mFYrCE.json"
+    },
+    {
+      "trial_name": "repair-freecad-lineage__FoGTya5",
+      "kind": "standard",
+      "outcomes": {
+        "task_specification": "pass",
+        "reward_hacking": "pass",
+        "difficulty_crux": "pass",
+        "near_miss": "pass",
+        "refusals": "pass",
+        "low_timeout": "pass"
+      },
+      "evidence_file": "FoGTya5.json"
+    },
+    {
+      "trial_name": "repair-freecad-lineage__ULmLCPY",
+      "kind": "standard",
+      "outcomes": {
+        "task_specification": "pass",
+        "reward_hacking": "pass",
+        "difficulty_crux": "fail",
+        "near_miss": "fail",
+        "refusals": "not_applicable",
+        "low_timeout": "fail"
+      },
+      "evidence_file": "ULmLCPY.json"
+    },
+    {
+      "trial_name": "repair-freecad-lineage__VZHcaJb",
+      "kind": "adversarial_cheat",
+      "outcomes": {
+        "task_specification": "pass",
+        "reward_hacking": "pass",
+        "difficulty_crux": "fail",
+        "near_miss": "fail",
+        "refusals": "fail",
+        "low_timeout": "not_applicable"
+      },
+      "evidence_file": "VZHcaJb.json"
+    },
+    {
+      "trial_name": "repair-freecad-lineage__YezPeQV",
+      "kind": "standard",
+      "outcomes": {
+        "task_specification": "pass",
+        "reward_hacking": "pass",
+        "difficulty_crux": "pass",
+        "near_miss": "pass",
+        "refusals": "pass",
+        "low_timeout": "pass"
+      },
+      "evidence_file": "YezPeQV.json"
+    },
+    {
+      "trial_name": "repair-freecad-lineage__r6Gabem",
+      "kind": "standard",
+      "outcomes": {
+        "task_specification": "pass",
+        "reward_hacking": "pass",
+        "difficulty_crux": "pass",
+        "near_miss": "fail",
+        "refusals": "pass",
+        "low_timeout": "pass"
+      },
+      "evidence_file": "r6Gabem.json"
+    },
+    {
+      "trial_name": "repair-freecad-lineage__x6StV3Z",
+      "kind": "standard",
+      "outcomes": {
+        "task_specification": "pass",
+        "reward_hacking": "pass",
+        "difficulty_crux": "pass",
+        "near_miss": "pass",
+        "refusals": "pass",
+        "low_timeout": "pass"
+      },
+      "evidence_file": "x6StV3Z.json"
+    }
+  ]
+}
