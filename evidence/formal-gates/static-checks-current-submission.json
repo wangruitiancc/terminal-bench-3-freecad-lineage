@@ -1,0 +1,13 @@
+{
+  "schema": "repair-freecad-lineage-current-static-checks-v1",
+  "checked_at": "2026-09-07T15:41:09Z",
+  "terminal_bench_main_commit": "83c7a6172d629c6575b785ab12c8db787bb2e323",
+  "current_submission_task_checksum": "140191cdc208c8ce99d1a168b306c71d74dd5cd2052a796c29d6f977054ae760",
+  "checks_run": 22,
+  "passed": 22,
+  "failed": 0,
+  "post_evaluation_change": [
+    "README.md"
+  ],
+  "execution_payload_unchanged": true
+}

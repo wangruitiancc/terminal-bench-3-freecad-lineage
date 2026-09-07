@@ -91,6 +91,19 @@
     },
     "status": "current_ci_reviewer_and_pinned_harbor_version_completed",
     "artifact": "evidence/formal-gates/implementation-rubric-claude-sonnet5-current.json",
+    "reviewed_task_checksum": "140191cdc208c8ce99d1a168b306c71d74dd5cd2052a796c29d6f977054ae760",
+    "harbor_reward": 1.0,
+    "trial_errors": 0,
     "transport_caveat": "Compatible relay used instead of official Anthropic endpoint."
+  },
+  "task_checksum_scope": "formal model-trial snapshot",
+  "evaluation_task_checksum": "3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8",
+  "current_submission_task_checksum": "140191cdc208c8ce99d1a168b306c71d74dd5cd2052a796c29d6f977054ae760",
+  "post_evaluation_change": {
+    "changed_files": [
+      "tasks/repair-freecad-lineage/README.md"
+    ],
+    "execution_payload_unchanged": true,
+    "note": "Contributor rewrote the four reviewer-facing README sections; instruction.md, task.toml, environment, solution, and tests are unchanged."
   }
 }

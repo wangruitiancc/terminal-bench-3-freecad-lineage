@@ -2,7 +2,8 @@
 
 日期：2026-09-07
 最终候选：`tasks/repair-freecad-lineage`
-冻结任务 checksum：`3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8`
+当前提交任务 checksum：`140191cdc208c8ce99d1a168b306c71d74dd5cd2052a796c29d6f977054ae760`
+正式模型试跑 checksum：`3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8`（试跑后仅由贡献者改写 reviewer-facing `README.md`，执行相关文件未变）
 当前结论：工程门禁通过，Codex `gpt-5.6-sol / xhigh` 与 Claude Code `claude-opus-5 / max` 都在同一冻结版本上取得 3 次有效连续失败，任务达到本轮难度目标。
 
 ## 1. 面试题要完成什么
@@ -122,9 +123,9 @@ HTTP 500/503、安装阶段 TLS EOF 和余额预授权失败的尝试全部作�
 
 ## 8. 当前完成度
 
-已完成任务源码、公开合同、私有验证器、六场景夹具、独立镜像、泄漏扫描、正负门禁、35 项审查、Codex 与 Claude 各自有效连续 `0/3`、两次 `/cheat`、两项自动分析、机器可读证据和确定性提交包。当前六项分析 rubric 还有四项待补跑。
+已完成任务源码、公开合同、私有验证器、六场景夹具、独立镜像、泄漏扫描、正负门禁、35 项审查、Codex 与 Claude 各自有效连续 `0/3`、两次 `/cheat`、全部六项自动分析、机器可读证据和确定性提交包。当前提交版本的 22 项静态检查与 35 项实现审查也已全部通过。
 
-招聘方如要求 Anthropic 官方端点证据，可在其授权环境对同一 task checksum 复跑，并把该结果作为新的独立证据记录。
+招聘方如要求 Anthropic 官方端点证据，可在其授权环境对当前提交 checksum 复跑，并把该结果作为新的独立证据记录。现有模型试跑使用的是 README 改写前的 checksum；两版之间只有不进入候选执行环境的 reviewer-facing README 不同。
 
 ## 9. 证据与交付
 

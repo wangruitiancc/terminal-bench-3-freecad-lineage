@@ -2,7 +2,7 @@
 
 This repository contains one original Terminal-Bench 3 task about persistent surface lineage in FreeCAD 0.21.2. A candidate must repair a single Python program so that native face references survive a repair, a partial Boolean edit, and a subsequent empty update.
 
-The frozen task checksum is `3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8`. The deterministic 34-file task archive has SHA-256 `8be679e6772af4aecc3c977d238cb293e68a3bf534e225dcf3db30c1ff2ad17f`.
+The current repository task checksum is `140191cdc208c8ce99d1a168b306c71d74dd5cd2052a796c29d6f977054ae760`. Formal model trials used checksum `3502b4fc96379eb53c9da89dc06aa139b0e4377db37455cb659ba012d22ae8e8`; the only later task-file change was the contributor-authored rewrite of the reviewer-facing `README.md`. The instruction, task configuration, environment, solution, and tests are byte-identical to the evaluated snapshot. The deterministic evaluation archive has SHA-256 `8be679e6772af4aecc3c977d238cb293e68a3bf534e225dcf3db30c1ff2ad17f`.
 
 ## Why this task is difficult
 
